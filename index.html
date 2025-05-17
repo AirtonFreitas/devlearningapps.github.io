@@ -9,18 +9,19 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #e0e0e0;
     }
     header {
-      background-color: #306998;
+      background-color: transparent;
       padding: 32px 16px;
       text-align: center;
-      color: white;
+      color: #00ffe0;
     }
     header img.logo {
-      height: 48px;
-      margin-bottom: 12px;
+      height: 52px;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 0 4px #00ffe0aa);
     }
     .apps {
       display: flex;
@@ -32,19 +33,26 @@
       margin: 0 auto;
     }
     .app-card {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      padding: 24px;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       text-align: center;
       width: 100%;
+      transition: transform 0.3s ease;
+    }
+    .app-card:hover {
+      transform: translateY(-4px);
     }
     .app-card img {
-      width: 72px;
-      height: 72px;
-      border-radius: 12px;
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
       margin-bottom: 16px;
       object-fit: cover;
+      border: 1px solid #00ffe0;
     }
     .app-card h2 {
       margin: 0 0 8px;
@@ -58,27 +66,33 @@
       padding: 10px 16px;
       border-radius: 8px;
       text-decoration: none;
-      color: white;
-      background-color: #306998;
+      color: #000;
       font-weight: 600;
+      background: linear-gradient(to right, #00ffe0, #007cf0);
+      transition: background 0.3s ease, transform 0.2s;
+    }
+    .buttons a:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #00e0ff, #0099ff);
     }
     .buttons a.app-store {
-      background-color: #555;
+      background: linear-gradient(to right, #555, #333);
+      color: #fff;
     }
     .notice {
       text-align: center;
       padding: 16px;
       font-style: italic;
-      color: #666;
+      color: #ccc;
     }
     footer {
       text-align: center;
       padding: 24px;
       font-size: 14px;
-      color: #888;
+      color: #aaa;
     }
     footer a {
-      color: #306998;
+      color: #00ffe0;
       text-decoration: none;
       font-weight: 600;
     }
