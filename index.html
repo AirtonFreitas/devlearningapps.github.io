@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DevLearning Apps</title>
+  <title>Dev Learning Apps</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -22,6 +22,18 @@
       height: 52px;
       margin-bottom: 16px;
       filter: drop-shadow(0 0 4px #00ffe0aa);
+    }
+    .highlight {
+      background: rgba(0, 255, 224, 0.1);
+      padding: 12px 24px;
+      border: 1px solid #00ffe055;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 24px;
+      color: #00ffe0;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     .apps {
       display: flex;
@@ -42,6 +54,10 @@
       text-align: center;
       width: 100%;
       transition: transform 0.3s ease;
+    }
+    .app-card.highlight-sql {
+      border: 2px solid #00ffe0;
+      background: linear-gradient(to top left, #00ffe011, #2c536433);
     }
     .app-card:hover {
       transform: translateY(-4px);
@@ -103,17 +119,14 @@
     <img src="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" alt="DevLearning Logo" class="logo" />
     <h1>DevLearning Apps</h1>
     <p>Aprenda tecnologias de forma prática e objetiva</p>
+    <div class="highlight">CERTIFICADO DISPONÍVEL</div>
   </header>
 
-  <div class="notice">
-    Este site está em desenvolvimento. Novidades em breve! 🚧
-  </div>
-
   <section class="apps">
-    <div class="app-card">
+    <div class="app-card highlight-sql">
       <img src="https://airtonfreitas.github.io/devlearningapps.github.io/sql.png" alt="Aprendendo SQL">
       <h2>Aprendendo SQL</h2>
-      <p>Curso completo de SQL com aulas, desafios e certificado.</p>
+      <p><strong>Curso completo com certificado!</strong> Aprenda SQL com aulas guiadas, desafios e acesso vitalício ao conteúdo premium. Ideal para concursos, TI e carreira dev.</p>
       <div class="buttons">
         <a href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendosql" target="_blank">Google Play</a>
         <a href="https://apps.apple.com/us/app/aprendendo-sql/id6744893043" target="_blank" class="app-store">App Store</a>
@@ -123,7 +136,7 @@
     <div class="app-card">
       <img src="https://airtonfreitas.github.io/devlearningapps.github.io/flutter.png" alt="Aprendendo Flutter">
       <h2>Aprendendo Flutter</h2>
-      <p>Aprenda Flutter com exemplos práticos, navegação e layout.</p>
+      <p>Aprenda Flutter com exemplos práticos, navegação e layout. Explore recursos do framework mais amado por desenvolvedores mobile.</p>
       <div class="buttons">
         <a href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendoflutter" target="_blank">Google Play</a>
         <a href="https://apps.apple.com/us/app/aprendendo-sql/id6744893043" target="_blank" class="app-store">App Store</a>
