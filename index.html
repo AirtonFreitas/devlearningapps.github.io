@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevLearning Apps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #306998;
+      padding: 32px;
+      text-align: center;
+      color: white;
+    }
+    .apps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      padding: 40px 16px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .app-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 24px;
+      text-align: center;
+      width: 100%;
+    }
+    .app-card img {
+      width: 72px;
+      height: 72px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+    .app-card h2 {
+      margin: 0 0 8px;
+    }
+    .buttons {
+      margin-top: 16px;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 4px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      background-color: #306998;
+      font-weight: 600;
+    }
+    .buttons a.app-store {
+      background-color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DevLearning Apps</h1>
+    <p>Aprenda tecnologias de forma prática e objetiva</p>
+  </header>
+
+  <section class="apps">
+    <div class="app-card">
+      <img src="https://via.placeholder.com/72" alt="Aprendendo SQL">
+      <h2>Aprendendo SQL</h2>
+      <p>Curso completo de SQL com aulas, desafios e certificado.</p>
+      <div class="buttons">
+        <a href="#" target="_blank">Google Play</a>
+        <a href="#" target="_blank" class="app-store">App Store</a>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <img src="https://via.placeholder.com/72" alt="Aprendendo Python">
+      <h2>Aprendendo Python</h2>
+      <p>Aprenda lógica de programação com Python de forma prática.</p>
+      <div class="buttons">
+        <a href="#" target="_blank">Google Play</a>
+        <a href="#" target="_blank" class="app-store">App Store</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 DevLearning. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
