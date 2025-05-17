@@ -14,9 +14,13 @@
     }
     header {
       background-color: #306998;
-      padding: 32px;
+      padding: 32px 16px;
       text-align: center;
       color: white;
+    }
+    header img.logo {
+      height: 48px;
+      margin-bottom: 12px;
     }
     .apps {
       display: flex;
@@ -40,6 +44,7 @@
       height: 72px;
       border-radius: 12px;
       margin-bottom: 16px;
+      object-fit: cover;
     }
     .app-card h2 {
       margin: 0 0 8px;
@@ -60,23 +65,39 @@
     .buttons a.app-store {
       background-color: #555;
     }
+    .notice {
+      text-align: center;
+      padding: 16px;
+      font-style: italic;
+      color: #666;
+    }
     footer {
       text-align: center;
       padding: 24px;
       font-size: 14px;
       color: #888;
     }
+    footer a {
+      color: #306998;
+      text-decoration: none;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo-devlearning.png" alt="DevLearning Logo" class="logo" />
     <h1>DevLearning Apps</h1>
     <p>Aprenda tecnologias de forma prática e objetiva</p>
   </header>
 
+  <div class="notice">
+    Este site está em desenvolvimento. Novidades em breve! 🚧
+  </div>
+
   <section class="apps">
     <div class="app-card">
-      <img src="https://via.placeholder.com/72" alt="Aprendendo SQL">
+      <img src="logo-sql.png" alt="Aprendendo SQL">
       <h2>Aprendendo SQL</h2>
       <p>Curso completo de SQL com aulas, desafios e certificado.</p>
       <div class="buttons">
@@ -86,18 +107,25 @@
     </div>
 
     <div class="app-card">
-      <img src="https://via.placeholder.com/72" alt="Aprendendo Python">
-      <h2>Aprendendo Python</h2>
-      <p>Aprenda lógica de programação com Python de forma prática.</p>
+      <img src="logo-flutter.png" alt="Aprendendo Flutter">
+      <h2>Aprendendo Flutter</h2>
+      <p>Aprenda Flutter com exemplos práticos, navegação e layout.</p>
       <div class="buttons">
         <a href="#" target="_blank">Google Play</a>
         <a href="#" target="_blank" class="app-store">App Store</a>
       </div>
     </div>
+
+    <div class="app-card">
+      <img src="https://via.placeholder.com/72" alt="Aprendendo Python">
+      <h2>Aprendendo Python</h2>
+      <p>Em breve! Um app para você aprender lógica com Python do zero.</p>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 DevLearning. Todos os direitos reservados.
+    <p>Entre em contato: <a href="mailto:contact@devlearningapps.com">contact@devlearningapps.com</a></p>
+    <p>&copy; 2025 DevLearning. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
