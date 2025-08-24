@@ -3,7 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dev Learning Apps</title>
+
+  <title>DevLearning Apps — Aprendendo SQL, Python e Flutter</title>
+  <meta name="description" content="Aprenda SQL, Python e Flutter de forma prática e objetiva. Apps com aulas, desafios, IDE integrada, áudios e certificados. Disponível no Google Play e App Store.">
+  <meta name="keywords" content="Aprendendo SQL, Aprendendo Python, Aprendendo Flutter, DevLearning Apps, apps educacionais, aprender programação, Flutter, SQL, Python">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DevLearning Apps — Aprendendo SQL, Python e Flutter">
+  <meta property="og:description" content="Aulas, desafios, IDE integrada e certificados. Baixe agora no Google Play e App Store.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devlearningapps.com/">
+  <meta property="og:image" content="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DevLearning Apps — Aprendendo SQL, Python e Flutter">
+  <meta name="twitter:description" content="Aulas, desafios, IDE integrada e certificados. Baixe agora no Google Play e App Store.">
+  <meta name="twitter:image" content="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png">
+
+  <link rel="icon" href="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Google tag (gtag.js) -->
@@ -16,100 +34,104 @@
   </script>
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-      color: #e0e0e0;
+    :root{
+      --bg1:#0f2027; --bg2:#203a43; --bg3:#2c5364;
+      --neo:#00ffe0; --neo-2:#007cf0; --text:#e0e0e0; --muted:#9aa7ad;
+      --card:#ffffff0f; --card-border:#ffffff1a; --ok:#15d36b; --warn:#f4b400;
     }
-    header {
-      background-color: transparent;
-      padding: 32px 16px;
-      text-align: center;
-      color: #00ffe0;
+    *{ box-sizing:border-box }
+    html, body{ height:100% }
+    body{
+      margin:0; font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
+      color: var(--text);
     }
-    header img.logo {
-      height: 52px;
-      margin-bottom: 16px;
-      filter: drop-shadow(0 0 4px #00ffe0aa);
+    header{
+      padding: 32px 16px 8px; text-align:center;
     }
-    .apps {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 32px;
-      padding: 40px 16px;
-      max-width: 800px;
-      margin: 0 auto;
+    header img.logo{
+      height: 56px; margin-bottom: 16px; filter: drop-shadow(0 0 4px #00ffe0aa);
     }
-    .app-card {
-      background: rgba(255, 255, 255, 0.06);
+    header h1{ margin:0 0 8px; letter-spacing:0.2px }
+    header p{ margin:0; color:#cfe8ef }
+
+    .apps{
+      display:grid; gap:24px; padding:40px 16px; max-width:1060px; margin:0 auto;
+      grid-template-columns: 1fr; 
+    }
+    @media(min-width:900px){
+      .apps{ grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .app-card{
+      background: var(--card);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--card-border);
       border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      width: 100%;
-      transition: transform 0.3s ease;
-    }
-    .app-card.highlight-sql {
-      border: 2px solid #00ffe0;
-      background: linear-gradient(to top left, #00ffe011, #2c536433);
-    }
-    .app-card:hover {
-      transform: translateY(-4px);
-    }
-    .app-card img {
-      width: 80px;
-      height: 80px;
-      border-radius: 16px;
-      margin-bottom: 16px;
-      object-fit: cover;
-      border: 1px solid #00ffe0;
-    }
-    .app-card h2 {
-      margin: 0 0 8px;
-    }
-    .buttons {
-      margin-top: 16px;
-    }
-    .buttons a {
-      display: inline-block;
-      margin: 4px;
-      padding: 10px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #000;
-      font-weight: 600;
-      background: linear-gradient(to right, #00ffe0, #007cf0);
-      transition: background 0.3s ease, transform 0.2s;
-    }
-    .buttons a:hover {
-      transform: scale(1.05);
-      background: linear-gradient(to right, #00e0ff, #0099ff);
-    }
-    .buttons a.app-store {
-      background: linear-gradient(to right, #555, #333);
-      color: #fff;
-    }
-    .notice {
-      text-align: center;
-      padding: 16px;
-      font-style: italic;
-      color: #ccc;
-    }
-    footer {
-      text-align: center;
       padding: 24px;
-      font-size: 14px;
-      color: #aaa;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.30);
+      transition: transform .25s ease, border-color .25s ease;
+      display:flex; flex-direction:column; align-items:center; text-align:center;
+      min-height: 420px;
     }
-    footer a {
-      color: #00ffe0;
-      text-decoration: none;
-      font-weight: 600;
+    .app-card:hover{ transform: translateY(-4px); }
+    .app-card.highlight-sql{ border: 2px solid var(--neo); background: linear-gradient(135deg, #00ffe011, #2c536433); }
+
+    .app-card img.app-icon{
+      width:84px; height:84px; border-radius:16px; object-fit:cover; margin-bottom:14px; border:1px solid var(--neo);
     }
+    .app-card h2{ margin: 8px 0 10px }
+    .app-desc{ color:#d3e7ec; margin:0 0 14px; line-height:1.5 }
+    .badges{
+      display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:14px;
+    }
+    .badge{
+      border:1px solid var(--card-border); border-radius:999px; padding:6px 12px; font-size:12px; color:#d8f5f2;
+      background: #ffffff14;
+    }
+    .badge.ok{ border-color:#1adf7a55 }
+    .badge.warn{ border-color:#f4b40055 }
+    .buttons{
+      margin-top:auto; display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
+      padding-top:4px;
+    }
+    .btn{
+      display:inline-block; text-decoration:none; font-weight:700; padding:10px 16px; border-radius:10px;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease, opacity .2s ease;
+      will-change: transform;
+    }
+    .btn:hover{ transform: translateY(-2px) }
+    .btn:focus-visible{ outline:2px dashed var(--neo); outline-offset:3px }
+
+    .btn-gp{
+      color:#000; background: linear-gradient(90deg, var(--neo), var(--neo-2));
+      box-shadow: 0 6px 14px rgba(0, 124, 240, .25);
+    }
+    .btn-ios{
+      color:#fff; background: linear-gradient(90deg, #555, #333);
+      border:1px solid #00000055;
+    }
+    .btn-disabled{
+      cursor:not-allowed; opacity:.6; color:#eee; background: linear-gradient(90deg, #777, #555);
+      border:1px dashed #999;
+    }
+
+    .notice{ text-align:center; padding: 8px 16px; color:#c6d6db; font-style:italic }
+    .container{ max-width:1060px; margin:0 auto; padding:0 16px }
+
+    .about{
+      margin: 32px 0 0; padding: 40px 0 24px; border-top:1px solid var(--card-border);
+      text-align:center;
+    }
+    .about p{ color:#d1e6eb; margin:8px auto; max-width:800px; line-height:1.6 }
+    .about a{ color: var(--neo); font-weight:700; text-decoration:none }
+    .about a:hover{ text-decoration:underline }
+
+    footer{
+      text-align:center; padding: 24px; font-size:14px; color:#bcd0d6;
+    }
+    footer a{ color: var(--neo); text-decoration:none; font-weight:600 }
+    .updated{ color: var(--muted); font-size:12px; margin-top:4px }
   </style>
 </head>
 <body>
@@ -119,36 +141,151 @@
     <p>Aprenda tecnologias de forma prática e objetiva</p>
   </header>
 
-  <section class="apps">
-    <div class="app-card highlight-sql">
-      <img src="https://airtonfreitas.github.io/devlearningapps.github.io/sql.png" alt="Aprendendo SQL">
-      <h2>Aprendendo SQL</h2>
-      <p>Curso completo de SQL com aulas guiadas, desafios e acesso vitalício ao conteúdo premium. <strong>Inclui certificado de conclusão!</strong> Ideal para concursos, TI e carreira dev.</p>
-      <div class="buttons">
-        <a href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendosql" target="_blank">Google Play</a>
-        <a href="https://apps.apple.com/us/app/aprendendo-sql/id6744893043" target="_blank" class="app-store">App Store</a>
-      </div>
-    </div>
+  <main class="container">
+    <section class="apps" aria-label="Lista de aplicativos DevLearning">
 
-    <div class="app-card">
-      <img src="https://airtonfreitas.github.io/devlearningapps.github.io/flutter.png" alt="Aprendendo Flutter">
-      <h2>Aprendendo Flutter</h2>
-      <p>Aprenda Flutter com exemplos práticos, navegação e layout. Explore recursos do framework mais amado por desenvolvedores mobile.</p>
-      <div class="buttons">
-        <a href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendoflutter" target="_blank">Google Play</a>
-        <a href="https://apps.apple.com/us/app/aprendendo-sql/id6744893043" target="_blank" class="app-store">App Store</a>
-      </div>
-    </div>
+      <!-- SQL -->
+      <article class="app-card highlight-sql" aria-labelledby="title-sql">
+        <img class="app-icon" src="https://airtonfreitas.github.io/devlearningapps.github.io/sql.png" alt="Ícone do app Aprendendo SQL" loading="lazy">
+        <h2 id="title-sql">Aprendendo SQL</h2>
+        <p class="app-desc">
+          Curso completo de SQL com aulas guiadas, desafios, <strong>IDE integrada</strong> e certificado de conclusão.
+          Ideal para concursos, TI e carreira dev.
+        </p>
+        <div class="badges" aria-label="Métricas do aplicativo Aprendendo SQL">
+          <span class="badge ok">+45.000 downloads</span>
+          <span class="badge ok">nota 5.0</span>
+          <span class="badge ok">+1.000 avaliações</span>
+        </div>
+        <div class="buttons">
+          <a class="btn btn-gp" aria-label="Abrir Aprendendo SQL no Google Play"
+             href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendosql" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn btn-ios" aria-label="Abrir Aprendendo SQL na App Store"
+             href="https://apps.apple.com/us/app/aprendendo-sql/id6744893043" target="_blank" rel="noopener">App Store</a>
+        </div>
+      </article>
 
-    <div class="app-card">
-      <h2>Aprendendo Python</h2>
-      <p><em>Estamos desenvolvendo este app para você aprender lógica e programação com Python do zero. Lançamento em breve!</em></p>
-    </div>
-  </section>
+      <!-- Flutter -->
+      <article class="app-card" aria-labelledby="title-flutter">
+        <img class="app-icon" src="https://airtonfreitas.github.io/devlearningapps.github.io/flutter.png" alt="Ícone do app Aprendendo Flutter" loading="lazy">
+        <h2 id="title-flutter">Aprendendo Flutter</h2>
+        <p class="app-desc">
+          Aprenda Flutter com exemplos práticos, navegação, layout e <strong>IDE integrada</strong>. Conteúdo em expansão.
+        </p>
+        <div class="badges" aria-label="Métricas do aplicativo Aprendendo Flutter">
+          <span class="badge warn">app novo</span>
+          <span class="badge ok">+500 downloads</span>
+          <span class="badge ok">nota 4,8</span>
+          <span class="badge ok">+70 avaliações</span>
+        </div>
+        <div class="buttons">
+          <a class="btn btn-gp" aria-label="Abrir Aprendendo Flutter no Google Play"
+             href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendoflutter" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn btn-ios" aria-label="Abrir Aprendendo Flutter na App Store"
+             href="https://apps.apple.com/us/app/aprendendo-flutter/id6746683178" target="_blank" rel="noopener">App Store</a>
+        </div>
+      </article>
+
+      <!-- Python -->
+      <article class="app-card" aria-labelledby="title-python">
+        <img class="app-icon" src="https://airtonfreitas.github.io/devlearningapps.github.io/python.png" alt="Ícone do app Aprendendo Python" loading="lazy">
+        <h2 id="title-python">Aprendendo Python</h2>
+        <p class="app-desc">
+          Aprenda lógica e programação com Python do zero a recursos avançados. Aulas, exercícios e <strong>IDE integrada</strong>.
+        </p>
+        <div class="badges" aria-label="Métricas do aplicativo Aprendendo Python">
+          <span class="badge warn">app novo</span>
+          <span class="badge ok">+1.500 downloads</span>
+          <span class="badge ok">nota 5.0</span>
+          <span class="badge ok">+10 avaliações</span>
+        </div>
+        <div class="buttons">
+          <a class="btn btn-gp" aria-label="Abrir Aprendendo Python no Google Play"
+             href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendopyhton" target="_blank" rel="noopener">Google Play</a>
+          <span class="btn btn-disabled" aria-disabled="true" title="Em breve na App Store">App Store (em breve)</span>
+        </div>
+      </article>
+
+    </section>
+
+    <p class="notice" role="note">
+      * Alguns recursos (como aulas premium, áudios e certificação) podem variar por plataforma. 
+    </p>
+
+    <section class="about" aria-label="Sobre o criador">
+      <h3>Sobre o Criador</h3>
+      <p>
+        Olá! Eu sou <strong>Airton Freitas</strong>, desenvolvedor único por trás dos apps <em>Aprendendo SQL</em>, <em>Aprendendo Python</em> e <em>Aprendendo Flutter</em>. 
+        Construo tudo do zero: conteúdo, código, design, publicação e manutenção contínua nas lojas.
+      </p>
+      <p>
+        Quer falar comigo, ter novidades ou oportunidades? Me adicione no 
+        <a href="https://www.linkedin.com/in/airton-siqueira-85260b174/" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+      <div class="updated">Última atualização: 24/08/2025</div>
+    </section>
+  </main>
 
   <footer>
-    <p>Entre em contato: <a href="mailto:contact@devlearningapps.com">contact@devlearningapps.com</a></p>
+    <p>Contato: <a href="mailto:contact@devlearningapps.com">contact@devlearningapps.com</a></p>
     <p>&copy; 2025 DevLearning. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- JSON-LD (SoftwareApplication) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Aprendendo SQL",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Android, iOS",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "ratingCount": 1000
+        },
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendosql",
+        "softwareVersion": "latest",
+        "image": "https://airtonfreitas.github.io/devlearningapps.github.io/sql.png",
+        "url": "https://devlearningapps.com/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Aprendendo Flutter",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Android, iOS",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": 70
+        },
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendoflutter",
+        "softwareVersion": "latest",
+        "image": "https://airtonfreitas.github.io/devlearningapps.github.io/flutter.png",
+        "url": "https://devlearningapps.com/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Aprendendo Python",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Android",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "ratingCount": 10
+        },
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendopyhton",
+        "softwareVersion": "latest",
+        "image": "https://airtonfreitas.github.io/devlearningapps.github.io/python.png",
+        "url": "https://devlearningapps.com/"
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
