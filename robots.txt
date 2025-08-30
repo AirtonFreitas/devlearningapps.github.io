@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://devlearningapps.com/sitemap.xml
