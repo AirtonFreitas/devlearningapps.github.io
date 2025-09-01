@@ -60,8 +60,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 20px 0;
-      padding: 10px 0;
+      margin: 10px 0;
+      padding: 5px 0;
     }
 
     .divider-line{
@@ -274,6 +274,173 @@
 
 
 
+    /* Aprendendo HTML Section */
+    .html-section {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 30px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .html-content {
+      flex: 1;
+      max-width: 450px;
+    }
+
+    .html-logo {
+      width: 45px;
+      height: 45px;
+      margin-right: 15px;
+      border-radius: 8px;
+      border: 2px solid var(--neo);
+      filter: drop-shadow(0 0 6px var(--neo));
+    }
+
+    .html-content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+      background: linear-gradient(90deg, var(--text), var(--neo));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+
+    .html-content .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin: 0 0 15px;
+      line-height: 1.4;
+    }
+
+    .html-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .highlight-tag {
+      background: transparent;
+      color: #ff6b35;
+      border: 2px solid #ff6b35;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(255, 107, 53, 0.2);
+    }
+
+    .html-metrics {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .html-metrics .metric {
+      color: var(--neo);
+      font-weight: 600;
+      font-size: 12px;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .html-stores {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .html-stores img {
+      height: 55px;
+      transition: transform 0.3s ease;
+    }
+
+    .html-stores img:hover {
+      transform: scale(1.05);
+    }
+
+    .html-preview {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .html-screenshot {
+      border-radius: 16px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .html-screenshot-main {
+      max-width: 200px;
+      max-height: 300px;
+      height: auto;
+    }
+
+    .html-screenshot-secondary {
+      max-width: 160px;
+      max-height: 240px;
+      height: auto;
+    }
+
+    .html-screenshot:hover {
+      transform: scale(2.0);
+      z-index: 10;
+    }
+
+    /* Mobile Responsive for HTML Section */
+    @media (max-width: 768px) {
+      .html-section {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+      }
+
+      .html-content {
+        text-align: center;
+        max-width: 100%;
+      }
+
+      .html-highlights {
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .highlight-tag {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+
+      .html-metrics {
+        align-items: center;
+      }
+
+      .html-stores {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .html-stores img {
+        height: 60px;
+      }
+
+      .html-screenshot {
+        max-width: 250px;
+      }
+    }
+
     /* Carrossel de imagens */
     .python-carousel{
       flex: 1;
@@ -465,6 +632,49 @@
   </header>
 
   <main class="container">
+    <!-- Divisão visual -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Aprendendo HTML - Novo App -->
+    <section class="html-section">
+      <div class="html-content">
+        <div class="title-with-logo">
+          <img src="assets/images/html-logo.png" alt="Logo Aprendendo HTML" class="html-logo" />
+          <h2>APRENDENDO HTML</h2>
+        </div>
+        <p class="subtitle">Aprenda HTML5 do zero com aulas práticas e Editor HTML</p>
+        
+        <div class="html-highlights">
+          <span class="highlight-tag">Tags HTML</span>
+          <span class="highlight-tag">Estrutura</span>
+          <span class="highlight-tag">Semântica</span>
+          <span class="highlight-tag">Formulários</span>
+          <span class="highlight-tag">HTML5</span>
+          <span class="highlight-tag">Responsivo</span>
+        </div>
+        
+        <div class="html-metrics">
+          <span class="metric">App novo</span>
+          <span class="metric">Editor HTML</span>
+          <span class="metric">Aulas práticas</span>
+        </div>
+        
+        <div class="html-stores">
+          <a href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendohtml" target="_blank" rel="noopener" aria-label="Baixar Aprendendo HTML no Google Play">
+            <img src="assets/images/google_play.png" alt="Google Play" />
+          </a>
+          <span class="btn btn-disabled" aria-disabled="true" aria-label="Aprendendo HTML em breve na App Store" title="Em breve na App Store">App Store (em breve)</span>
+        </div>
+      </div>
+      
+      <div class="html-preview">
+        <img src="assets/images/html-screenshot1.png" alt="Print 1 do app Aprendendo HTML" class="html-screenshot html-screenshot-main" />
+        <img src="assets/images/html-screenshot.png" alt="Print 2 do app Aprendendo HTML" class="html-screenshot html-screenshot-secondary" />
+      </div>
+    </section>
+
     <!-- Divisão visual -->
     <div class="section-divider">
       <div class="divider-line"></div>
