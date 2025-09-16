@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://devlearningapps.com/</loc>
+    <lastmod>2025-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://devlearningapps.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devlearningapps.com/"/>
+  </url>
+  <url>
+    <loc>https://devlearningapps.com/apps.html</loc>
+    <lastmod>2025-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://devlearningapps.com/apps.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devlearningapps.com/apps.html"/>
+  </url>
+  <url>
+    <loc>https://devlearningapps.com/ajuda.html</loc>
+    <lastmod>2025-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://devlearningapps.com/ajuda.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devlearningapps.com/ajuda.html"/>
+  </url>
+  <url>
+    <loc>https://devlearningapps.com/privacy-policy.html</loc>
+    <lastmod>2025-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://devlearningapps.com/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://devlearningapps.com/privacy-policy.html"/>
+  </url>
+</urlset>

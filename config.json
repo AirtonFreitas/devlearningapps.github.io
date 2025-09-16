@@ -1,0 +1,39 @@
+{
+  "site": {
+    "url": "https://devlearningapps.com",
+    "name": "Dev Learning Apps",
+    "description": "Aprenda programação do zero com nossos apps educativos"
+  },
+  "build": {
+    "outputDir": "dist",
+    "publicDir": "public"
+  },
+  "international": {
+    "hasEnRoutes": false,
+    "hasEsRoutes": false
+  },
+  "sitemap": {
+    "pages": [
+      {
+        "path": "/",
+        "priority": "1.0",
+        "changefreq": "weekly"
+      },
+      {
+        "path": "/apps.html",
+        "priority": "0.9",
+        "changefreq": "weekly"
+      },
+      {
+        "path": "/ajuda.html",
+        "priority": "0.8",
+        "changefreq": "monthly"
+      },
+      {
+        "path": "/privacy-policy.html",
+        "priority": "0.5",
+        "changefreq": "monthly"
+      }
+    ]
+  }
+}

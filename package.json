@@ -1,0 +1,31 @@
+{
+  "name": "dev-learning-apps",
+  "version": "1.0.0",
+  "description": "Dev Learning Apps - Aprenda programação do zero",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'Build completed'",
+    "postbuild": "node scripts/generate-sitemap.mjs",
+    "generate-sitemap": "node scripts/generate-sitemap.mjs",
+    "validate-sitemap": "node -e \"console.log('Sitemap validation: https://devlearningapps.com/sitemap.xml')\""
+  },
+  "keywords": [
+    "programming",
+    "education",
+    "python",
+    "sql",
+    "flutter",
+    "html",
+    "apps"
+  ],
+  "author": "Dev Learning Apps",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airtonfreitas/devlearningapps.github.io.git"
+  },
+  "homepage": "https://devlearningapps.com"
+}
