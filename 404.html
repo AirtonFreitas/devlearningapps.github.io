@@ -19,45 +19,75 @@
   <link rel="stylesheet" href="assets/css/components.css">
   
   <style>
+    :root {
+      --bg: #0b1b22;
+      --text: #ffffff;
+      --muted: #a0a0a0;
+      --card: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --neo: #00ffe0;
+      --neo-2: #00d4c4;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
     .error-page {
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .error-content {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 20px;
-      background: var(--bg);
+      padding: 60px 20px;
+      background: linear-gradient(135deg, rgba(0,255,224,0.1), rgba(44,83,100,0.3));
     }
-    
-    .error-content {
+
+    .error-inner {
       max-width: 600px;
     }
     
     .error-code {
       font-size: 8rem;
-      font-weight: 700;
-      color: var(--neo);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--neo), #00d4c4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       margin: 0;
       line-height: 1;
+      text-shadow: 0 0 30px rgba(0,255,224,0.3);
     }
     
     .error-title {
-      font-size: 2rem;
-      font-weight: 600;
+      font-size: 2.5rem;
+      font-weight: 700;
       color: var(--text);
-      margin: 20px 0 10px;
+      margin: 20px 0 16px;
+      line-height: 1.2;
     }
     
     .error-description {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: var(--muted);
-      margin: 0 0 30px;
+      margin: 0 0 40px;
       line-height: 1.6;
     }
     
     .error-actions {
       display: flex;
-      gap: 16px;
+      gap: 20px;
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -66,59 +96,156 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 24px;
-      border-radius: 8px;
+      padding: 16px 32px;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1.1rem;
       transition: all 0.3s ease;
       border: 2px solid transparent;
+      min-width: 180px;
     }
     
     .btn-primary {
       background: var(--neo);
       color: #0b1b22;
+      box-shadow: 0 4px 20px rgba(0,255,224,0.3);
     }
     
     .btn-primary:hover {
       background: var(--neo-2);
       color: white;
       transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,255,224,0.4);
     }
     
     .btn-secondary {
       background: transparent;
       color: var(--text);
-      border-color: var(--card-border);
+      border-color: rgba(255,255,255,0.3);
     }
     
     .btn-secondary:hover {
-      background: var(--card);
+      background: rgba(255,255,255,0.1);
       border-color: var(--neo);
+      transform: translateY(-2px);
+    }
+
+    .error-features {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    .error-feature {
+      padding: 24px;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.3s ease;
+    }
+
+    .error-feature:hover {
+      transform: translateY(-4px);
+    }
+
+    .error-feature h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+
+    .error-feature p {
+      font-size: 1rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
     }
     
     @media(max-width: 768px) {
       .error-code { font-size: 6rem }
-      .error-title { font-size: 1.5rem }
-      .error-actions { flex-direction: column; align-items: center }
-      .btn { width: 100%; max-width: 280px }
+      .error-title { font-size: 2rem }
+      .error-description { font-size: 1.1rem }
+      .error-actions { 
+        flex-direction: column; 
+        align-items: center;
+        gap: 16px;
+      }
+      .btn { 
+        width: 100%; 
+        max-width: 280px;
+        padding: 14px 24px;
+        font-size: 1rem;
+      }
+      .error-features {
+        margin-top: 40px;
+        gap: 20px;
+      }
+      .error-feature {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="error-page">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-top">
+      <a href="/" class="brand" aria-label="Dev Learning Apps">
+        <img src="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" alt="Logo Dev Learning Apps - Aprenda programação do zero" class="brand-logo" />
+        <span class="brand-name">Dev Learning Apps</span>
+      </a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="/">Home</a>
+        <a href="/apps.html">Nossos Apps</a>
+        <a href="/ajuda.html">Ajuda</a>
+      </nav>
+      <div class="header-actions"></div>
+    </div>
+  </header>
+
+  <!-- Error Content -->
+  <main class="error-page">
     <div class="error-content">
-      <h1 class="error-code">404</h1>
-      <h2 class="error-title">Página não encontrada</h2>
-      <p class="error-description">
-        A página que você está procurando não existe ou foi movida. 
-        Que tal explorar nossos apps de programação?
-      </p>
-      
-      <div class="error-actions">
-        <a href="/" class="btn btn-primary">Voltar ao início</a>
-        <a href="/apps.html" class="btn btn-secondary">Ver nossos apps</a>
+      <div class="error-inner">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Página não encontrada</h2>
+        <p class="error-description">
+          A página que você está procurando não existe ou foi movida. 
+          Que tal explorar nossos apps de programação?
+        </p>
+        
+        <div class="error-actions">
+          <a href="/" class="btn btn-primary">Voltar ao início</a>
+          <a href="/apps.html" class="btn btn-secondary">Ver nossos apps</a>
+        </div>
+
+        <div class="error-features">
+          <div class="error-feature">
+            <h3>🎯 Aprenda Python</h3>
+            <p>Lógica de programação com aulas práticas e exercícios interativos.</p>
+          </div>
+          <div class="error-feature">
+            <h3>🗄️ Domine SQL</h3>
+            <p>Consultas e bancos de dados do básico ao avançado.</p>
+          </div>
+          <div class="error-feature">
+            <h3>📱 Crie Apps</h3>
+            <p>Flutter e HTML para desenvolvimento mobile e web.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="display:flex; flex-direction:column; gap:10px; align-items:center;">
+      <p>&copy; 2025 DevLearning. Todos os direitos reservados. <a href="privacy-policy.html">Política de Privacidade</a></p>
+    </div>
+  </footer>
 </body>
 </html>
