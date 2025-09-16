@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Central de Ajuda e Suporte | Dev Learning Apps - FAQ e Contato</title>
+  <meta name="description" content="Central de ajuda completa dos apps DevLearning. FAQ detalhado, recuperação de senha, problemas de premium, contato por e-mail e formulário. Suporte 24/7.">
+  <meta name="keywords" content="ajuda DevLearning, suporte apps programação, FAQ programação, contato DevLearning, recuperar senha, problemas premium, suporte técnico, central ajuda">
+  <meta name="author" content="Dev Learning Apps">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="pt-BR">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ajuda e Suporte • Dev Learning Apps">
+  <meta property="og:description" content="Central de ajuda e suporte dos apps DevLearning. FAQ, contato e soluções para problemas comuns.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devlearningapps.com/ajuda.html">
+  <meta property="og:image" content="https://devlearningapps.com/assets/images/devlearning-cover.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ajuda e Suporte • Dev Learning Apps">
+  <meta name="twitter:description" content="Central de ajuda e suporte dos apps DevLearning. FAQ, contato e soluções para problemas comuns.">
+  <meta name="twitter:image" content="https://devlearningapps.com/assets/images/devlearning-cover.png">
+
+  <link rel="icon" href="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-321501252"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-321501252');
+  </script>
+
+  <style>
+    :root{
+      --bg1:#0f2027; --bg2:#203a43; --bg3:#2c5364;
+      --neo:#00ffe0; --neo-2:#007cf0; --text:#e0e0e0; --muted:#9aa7ad;
+      --card:#ffffff0f; --card-border:#ffffff1a; --ok:#15d36b; --warn:#4b400;
+    }
+    *{ box-sizing:border-box }
+    html, body{ height:100% }
+    body{
+      margin:0; font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+      background: linear-gradient(90deg, var(--bg1), var(--bg3));
+      color: var(--text);
+    }
+
+    .container{ max-width:1060px; margin:0 auto; padding:0 16px }
+    .page-header{ padding:16px 0 24px; text-align:center }
+    .page-header h1{ margin:12px 0 0; font-size: 2.5rem; font-weight: 700; background: linear-gradient(90deg, var(--text), var(--neo)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    
+    .faq-section{ margin: 40px 0 }
+    .faq-item{ 
+      background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; 
+      margin-bottom: 16px; overflow: hidden; backdrop-filter: blur(12px);
+    }
+    .faq-question{ 
+      padding: 20px; font-weight: 600; font-size: 1.1rem; cursor: pointer; 
+      display: flex; justify-content: space-between; align-items: center;
+      transition: background 0.2s ease;
+    }
+    .faq-question:hover{ background: rgba(255,255,255,0.05) }
+    .faq-answer{ 
+      padding: 0 20px 20px; color: var(--muted); line-height: 1.6; 
+      display: none;
+    }
+    .faq-answer.show{ display: block }
+    .faq-icon{ font-size: 1.2rem; transition: transform 0.2s ease }
+    .faq-icon.rotated{ transform: rotate(180deg) }
+
+    .contact-section{ 
+      background: linear-gradient(135deg, rgba(0,255,224,0.1), rgba(44,83,100,0.3));
+      border: 1px solid var(--card-border); border-radius: 16px; padding: 30px; margin: 40px 0;
+      text-align: center;
+    }
+    .contact-section h3{ margin: 0 0 16px; color: var(--text) }
+    .contact-section p{ margin: 0 0 20px; color: var(--muted) }
+    .contact-email{ 
+      display: inline-block; background: var(--neo); color: #0b1b22; 
+      padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+    .contact-email:hover{ transform: translateY(-2px) }
+
+    .form-wrapper { 
+      height: min(1200px, 90vh); 
+      margin: 20px 0;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(12px);
+    }
+    .form-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    footer{ text-align:center; padding: 24px; font-size:14px; color:#bcd0d6 }
+    footer a{ color: var(--neo); text-decoration:none; font-weight:600 }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html#home" class="brand" aria-label="Dev Learning Apps">
+        <img src="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" alt="DevLearning Logo" class="brand-logo" />
+        <span class="brand-name">Dev Learning Apps</span>
+      </a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="index.html#home">Home</a>
+        <a href="apps.html">Nossos Apps</a>
+        <a href="ajuda.html" class="is-active">Ajuda</a>
+      </nav>
+      <div class="header-actions"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Central de Ajuda</h1>
+      <p>Encontre respostas rápidas para suas dúvidas sobre nossos apps</p>
+    </div>
+
+    <section class="faq-section">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Esqueci minha senha. Como recuperar?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Toque em "Esqueci minha senha" e siga o e-mail de recuperação. Verifique Spam/Lixeira e confirme o e-mail digitado.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Posso usar a mesma conta em mais de um dispositivo?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Sim. Faça login com o mesmo e-mail. Progresso e premium sincronizam ao abrir conectado.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Troquei de celular. Vou perder meu acesso?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Não. Instale o app e entre com o mesmo e-mail. Se não liberar, use "Restaurar acesso".</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Paguei e o premium não liberou. O que faço?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Reabra o app online, confira a conta da compra e toque em "Restaurar acesso". Se persistir, envie comprovante.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Comprei no site o Passe Completo. Como uso nos apps?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Entre com o mesmo e-mail usado no site e acesse Perfil → Restaurar acesso.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Posso comprar o premium de cada app separadamente?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Sim. Cada app tem preço próprio. O Passe Completo libera todos.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Recebi cobrança duplicada. Como proceder?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Confira o histórico de pedidos da loja/site e envie o comprovante pelo formulário.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Como reportar um bug?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Envie descrição, passos, prints/vídeo, modelo do aparelho, versão do SO e do app pelo formulário.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Comprei com outra conta da loja.</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>O acesso fica na conta da compra. Envie o pedido e a conta correta para avaliarmos opções.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h3>Não encontrou sua resposta?</h3>
+      <p>Entre em contato conosco e responderemos o mais rápido possível</p>
+      
+      <div style="margin: 30px 0;">
+        <a href="mailto:contact@devlearningapps.com" class="contact-email" style="font-size: 1.2rem; padding: 16px 32px;">contact@devlearningapps.com</a>
+        <p style="margin: 16px 0 0; color: var(--muted); font-size: 0.9rem;">Ou use o formulário abaixo:</p>
+      </div>
+      
+      <section class="form-wrapper">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSe4EO4cLxgZq3buN8Fwu5bmH4QyJdYRBOiOlhCscgfriy_Akg/viewform?embedded=true"
+          loading="lazy"
+        ></iframe>
+      </section>
+      
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; flex-direction:column; gap:10px; align-items:center;">
+      <p>&copy; 2025 DevLearning. Todos os direitos reservados. <a href="privacy-policy.html">Política de Privacidade</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('.faq-icon');
+      
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        icon.classList.remove('rotated');
+      } else {
+        answer.classList.add('show');
+        icon.classList.add('rotated');
+      }
+    }
+  </script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

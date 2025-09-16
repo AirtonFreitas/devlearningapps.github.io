@@ -4,25 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Dev Learning Apps</title>
-  <meta name="description" content="Aprenda Python, SQL e Flutter com nossos apps educativos. Aulas práticas, IDE integrada e conteúdo acessível para iniciantes.">
-  <meta name="keywords" content="aprender Python, curso SQL, programar em Flutter, DevLearning Apps, apps de programação para iniciantes, Python, SQL, Flutter">
+  <title>Dev Learning Apps - Aprenda Programação do Zero | Python, SQL, Flutter, HTML</title>
+  <meta name="description" content="Aprenda programação do zero com nossos apps educativos. Python, SQL, Flutter e HTML com aulas práticas, IDE integrada e certificação. Mais de 1.500 downloads e 4.8 de avaliação!">
+  <meta name="keywords" content="aprender programação, curso Python, curso SQL, curso Flutter, curso HTML, programação para iniciantes, apps educativos, DevLearning, programação mobile, IDE integrada, certificação programação, aulas práticas programação">
+  <meta name="author" content="Dev Learning Apps">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="pt-BR">
+  <meta name="revisit-after" content="7 days">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Dev Learning Apps">
-  <meta property="og:description" content="Aprenda programação com nossos apps: Python, SQL e Flutter. Conteúdo prático e acessível.">
+  <meta property="og:title" content="Dev Learning Apps - Aprenda Programação do Zero">
+  <meta property="og:description" content="Aprenda Python, SQL, Flutter e HTML com nossos apps educativos. Aulas práticas, IDE integrada e certificação. Mais de 1.500 downloads!">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://devlearningapps.com/">
-  <meta property="og:image" content="https://devlearningapps.com/assets/images/devlearning-cover.png">
+  <meta property="og:image" content="https://devlearningapps.com/dev_learning.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Dev Learning Apps">
+  <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dev Learning Apps">
-  <meta name="twitter:description" content="Aprenda programação com nossos apps: Python, SQL e Flutter. Conteúdo prático e acessível.">
-  <meta name="twitter:image" content="https://devlearningapps.com/assets/images/devlearning-cover.png">
+  <meta name="twitter:title" content="Dev Learning Apps - Aprenda Programação do Zero">
+  <meta name="twitter:description" content="Aprenda Python, SQL, Flutter e HTML com nossos apps educativos. Aulas práticas, IDE integrada e certificação.">
+  <meta name="twitter:image" content="https://devlearningapps.com/dev_learning.png">
+  <meta name="twitter:creator" content="@devlearningapps">
 
   <link rel="icon" href="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/components.css">
+  
+  <!-- Dados Estruturados (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dev Learning Apps",
+    "description": "Aprenda programação do zero com nossos apps educativos. Python, SQL, Flutter e HTML com aulas práticas e IDE integrada.",
+    "url": "https://devlearningapps.com",
+    "logo": "https://devlearningapps.com/dev_learning.png",
+    "sameAs": [
+      "https://play.google.com/store/apps/dev?id=7220469988134137106",
+      "https://apps.apple.com/us/developer/airton-siq/id1763393313"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@devlearningapps.com",
+      "contactType": "customer service"
+    },
+    "offers": {
+      "@type": "Offer",
+      "description": "Apps educativos de programação",
+      "price": "0",
+      "priceCurrency": "BRL"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Dev Learning Apps",
+    "description": "Coleção de apps para aprender programação: Python, SQL, Flutter e HTML",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1500"
+    }
+  }
+  </script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-321501252"></script>
@@ -625,11 +683,73 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" alt="DevLearning Logo" class="logo" />
-    <h1>Dev Learning Apps</h1>
-    <p>Aprenda programação com nossos apps educativos. Conteúdo prático e acessível para iniciantes.</p>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="#home" class="brand" aria-label="Dev Learning Apps">
+        <img src="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" alt="DevLearning Logo" class="brand-logo" />
+        <span class="brand-name">Dev Learning Apps</span>
+      </a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="#home">Home</a>
+        <a href="apps.html">Nossos Apps</a>
+        <a href="ajuda.html">Ajuda</a>
+      </nav>
+      <div class="header-actions"></div>
+    </div>
   </header>
+
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-carousel" data-autoplay="6000" role="region" aria-roledescription="carousel" aria-label="Banner principal">
+        <!-- Slides serão carregados automaticamente da pasta assets/home-carousel/ -->
+        <button class="hero-nav prev" aria-label="Imagem anterior">‹</button>
+        <button class="hero-nav next" aria-label="Próxima imagem">›</button>
+        <div class="hero-dots" role="tablist" aria-label="Selecionar slide do banner"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de apelo - Novo modelo de trabalho -->
+  <section class="work-reality">
+    <div class="container">
+      <div class="work-content">
+        <h1>O Futuro do Trabalho é Agora</h1>
+        <p class="work-subtitle">
+          <strong>Home office, trabalho remoto e flexibilidade</strong> não são mais tendências - são a realidade atual. 
+          Profissionais de tecnologia precisam se adaptar constantemente e aprender novas habilidades.
+        </p>
+        <div class="work-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🏠</div>
+            <div class="highlight-text">
+              <h3>Home Office</h3>
+              <p>Mais de 40% dos profissionais trabalham remotamente</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">💻</div>
+            <div class="highlight-text">
+              <h3>Habilidades Digitais</h3>
+              <p>Programação e tecnologia são essenciais para o futuro</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">📱</div>
+            <div class="highlight-text">
+              <h3>Aprenda em Qualquer Lugar</h3>
+              <p>Estude no seu tempo, no seu ritmo, onde estiver</p>
+            </div>
+          </div>
+        </div>
+        <div class="work-cta">
+          <p>
+            <strong>Não fique para trás.</strong> Aprenda as linguagens mais demandadas do mercado 
+            com nossos apps práticos e acessíveis. Comece hoje mesmo sua jornada na programação.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <main class="container">
     <!-- Divisão visual -->
@@ -637,11 +757,18 @@
       <div class="divider-line"></div>
     </div>
 
-    <!-- Aprendendo HTML - Novo App -->
-    <section class="html-section">
+  <!-- Seção Novidades -->
+  <section class="novidades-section">
+    <div class="container">
+      <h2 class="novidades-title">Novidades</h2>
+    </div>
+  </section>
+
+  <!-- Aprendendo HTML - Novo App -->
+  <section class="html-section">
       <div class="html-content">
         <div class="title-with-logo">
-          <img src="assets/images/html-logo.png" alt="Logo Aprendendo HTML" class="html-logo" />
+          <img src="assets/images/html-logo.png" alt="Logo do app Aprendendo HTML - Aprenda HTML5 do zero" class="html-logo" />
           <h2>APRENDENDO HTML</h2>
         </div>
         <p class="subtitle">Aprenda HTML5 do zero com aulas práticas e Editor HTML</p>
@@ -682,253 +809,10 @@
       <div class="divider-line"></div>
     </div>
 
-    <!-- Seção Python em destaque -->
-    <section class="python-section" aria-label="Aprendendo Python">
-      <div class="python-content">
-        <div class="title-with-logo">
-          <img src="python.png" alt="App Aprendendo Python com aulas práticas" class="python-logo" />
-          <h2>Aprendendo Python</h2>
-        </div>
-        <p class="subtitle">Aprenda lógica e programação com Python do zero a recursos avançados. Curso prático com aulas passo a passo, IDE integrada e exercícios para iniciantes.</p>
-        
-        <div class="python-metrics">
-          <div class="metric">
-            <div class="metric-value">+1.500</div>
-            <div class="metric-label">downloads</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value">4.8</div>
-            <div class="metric-label">nota</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value">+1.060</div>
-            <div class="metric-label">usuários</div>
-          </div>
-        </div>
-        
-        <div class="python-stores">
-          <a href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendopyhton" target="_blank" rel="noopener" aria-label="Abrir Aprendendo Python no Google Play">
-            <img src="assets/images/google_play.png" alt="Disponível no Google Play" />
-          </a>
-          <a href="https://apps.apple.com/us/app/aprendendo-python/id6747948627" target="_blank" rel="noopener" aria-label="Abrir Aprendendo Python na App Store">
-            <img src="assets/images/apple_store.png" alt="Disponível na App Store" />
-          </a>
-        </div>
-      </div>
-      
-      <div class="python-carousel">
-        <div class="carousel-container">
-          <div class="carousel-slide active">
-            <img src="assets/images/python/screens/1.png" alt="Screenshot 1 do app Aprendendo Python" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/python/screens/2.png" alt="Screenshot 2 do app Aprendendo Python" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/python/screens/3.png" alt="Screenshot 3 do app Aprendendo Python" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/python/screens/4.png" alt="Screenshot 4 do app Aprendendo Python" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/python/screens/5.png" alt="Screenshot 5 do app Aprendendo Python" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/python/screens/6.png" alt="Screenshot 6 do app Aprendendo Python" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/python/screens/7.png" alt="Screenshot 7 do app Aprendendo Python" />
-          </div>
-        </div>
-        
-        <button class="carousel-nav prev" aria-label="Imagem anterior">‹</button>
-        <button class="carousel-nav next" aria-label="Próxima imagem">›</button>
-        
-        <div class="carousel-dots">
-          <button class="carousel-dot active" aria-label="Ir para imagem 1"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 2"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 3"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 4"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 5"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 6"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 7"></button>
-        </div>
-      </div>
-    </section>
+    
 
-    <!-- Divisão visual -->
-    <div class="section-divider">
-      <div class="divider-line"></div>
-    </div>
 
-    <!-- Seção SQL em destaque -->
-    <section class="python-section" aria-label="Aprendendo SQL">
-      <div class="python-content">
-        <div class="title-with-logo">
-          <img src="sql.png" alt="App Aprendendo SQL com banco de dados e queries" class="python-logo" />
-          <h2>Aprendendo SQL</h2>
-        </div>
-        <p class="subtitle">Curso completo de SQL com aulas guiadas, desafios, IDE integrada e certificado de conclusão. Aprenda banco de dados e queries para concursos, TI e carreira dev.</p>
-        
-        <div class="python-metrics">
-          <div class="metric">
-            <div class="metric-value">+44k</div>
-            <div class="metric-label">downloads</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value">5.0</div>
-            <div class="metric-label">nota</div>
-          </div>
-          <div class="metric">
-            <div class="metric-value">+11.8k</div>
-            <div class="metric-label">usuários</div>
-          </div>
-        </div>
-        
-        <div class="python-stores">
-          <a href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendosql" target="_blank" rel="noopener" aria-label="Abrir Aprendendo SQL no Google Play">
-            <img src="assets/images/google_play.png" alt="Disponível no Google Play" />
-          </a>
-          <a href="https://apps.apple.com/us/app/aprendendo-sql/id6744893043" target="_blank" rel="noopener" aria-label="Abrir Aprendendo SQL na App Store">
-            <img src="assets/images/apple_store.png" alt="Disponível na App Store" />
-          </a>
-        </div>
-      </div>
-      
-      <div class="python-carousel">
-        <div class="carousel-container">
-          <div class="carousel-slide active">
-            <img src="assets/images/sql/screens/1.png" alt="Screenshot 1 do app Aprendendo SQL" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/sql/screens/2.png" alt="Screenshot 2 do app Aprendendo SQL" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/sql/screens/3.png" alt="Screenshot 3 do app Aprendendo SQL" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/sql/screens/4.png" alt="Screenshot 4 do app Aprendendo SQL" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/sql/screens/5.png" alt="Screenshot 5 do app Aprendendo SQL" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/sql/screens/6.png" alt="Screenshot 6 do app Aprendendo SQL" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/sql/screens/7.png" alt="Screenshot 7 do app Aprendendo SQL" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/sql/screens/8.png" alt="Screenshot 8 do app Aprendendo SQL" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/sql/screens/9.png" alt="Screenshot 9 do app Aprendendo SQL" />
-          </div>
-          <div class="carousel-slide">
-            <img src="assets/images/sql/screens/10.png" alt="Screenshot 10 do app Aprendendo SQL" />
-          </div>
-        </div>
-        
-        <button class="carousel-nav prev" aria-label="Imagem anterior">‹</button>
-        <button class="carousel-nav next" aria-label="Próxima imagem">›</button>
-        
-        <div class="carousel-dots">
-          <button class="carousel-dot active" aria-label="Ir para imagem 1"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 2"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 3"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 4"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 5"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 6"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 7"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 8"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 9"></button>
-          <button class="carousel-dot" aria-label="Ir para imagem 10"></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Divisão visual -->
-    <div class="section-divider">
-      <div class="divider-line"></div>
-    </div>
-
-    <!-- Título da seção de todos os apps -->
-    <div class="section-title">
-      <h2>Apps de Programação para Iniciantes</h2>
-    </div>
-
-    <section class="apps" aria-label="Lista de aplicativos DevLearning">
-
-      <!-- SQL -->
-      <article class="app-card" aria-labelledby="title-sql">
-                  <img class="app-icon" src="https://airtonfreitas.github.io/devlearningapps.github.io/sql.png" alt="App Aprendendo SQL com banco de dados e queries" loading="lazy">
-        <h3 id="title-sql">Aprendendo SQL</h3>
-        <p class="app-desc">
-          Curso completo de SQL com aulas guiadas, desafios, <strong>IDE integrada</strong> e certificado de conclusão.
-          Aprenda banco de dados e queries para concursos, TI e carreira dev.
-        </p>
-        <div class="badges" aria-label="Métricas do aplicativo Aprendendo SQL">
-          <span class="badge ok">+45.000 downloads</span>
-          <span class="badge ok">nota 5.0</span>
-          <span class="badge ok">+1.000 avaliações</span>
-        </div>
-        <div class="buttons">
-          <a class="btn btn-gp" aria-label="Abrir Aprendendo SQL no Google Play"
-             href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendosql" target="_blank" rel="noopener">Google Play</a>
-          <a class="btn btn-ios" aria-label="Abrir Aprendendo SQL na Apple Store"
-             href="https://apps.apple.com/us/app/aprendendo-sql/id6744893043" target="_blank" rel="noopener">Apple Store</a>
-        </div>
-      </article>
-
-      <!-- Flutter -->
-      <article class="app-card" aria-labelledby="title-flutter">
-                  <img class="app-icon" src="https://airtonfreitas.github.io/devlearningapps.github.io/flutter.png" alt="App Aprendendo Flutter com criação de apps móveis" loading="lazy">
-        <h3 id="title-flutter">Aprendendo Flutter</h3>
-        <p class="app-desc">
-          Aprenda Flutter com exemplos práticos, navegação, layout e <strong>IDE integrada</strong>. Programe em Flutter para criar apps móveis com conteúdo em expansão.
-        </p>
-        <div class="badges" aria-label="Métricas do aplicativo Aprendendo Flutter">
-          <span class="badge warn">app novo</span>
-          <span class="badge ok">+500 downloads</span>
-          <span class="badge ok">nota 4,8</span>
-          <span class="badge ok">+70 avaliações</span>
-        </div>
-        <div class="buttons">
-          <a class="btn btn-gp" aria-label="Abrir Aprendendo Flutter no Google Play"
-             href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendoflutter" target="_blank" rel="noopener">Google Play</a>
-          <a class="btn btn-ios" aria-label="Abrir Aprendendo Flutter na Apple Store"
-             href="https://apps.apple.com/us/app/aprendendo-flutter/id6746683178" target="_blank" rel="noopener">Apple Store</a>
-        </div>
-      </article>
-
-      <!-- Python -->
-      <article class="app-card" aria-labelledby="title-python">
-                  <img class="app-icon" src="https://airtonfreitas.github.io/devlearningapps.github.io/python.png" alt="App Aprendendo Python com aulas práticas" loading="lazy">
-        <h3 id="title-python">Aprendendo Python</h3>
-        <p class="app-desc">
-          Aprenda lógica e programação com Python do zero a recursos avançados. Curso prático com aulas, exercícios e <strong>IDE integrada</strong> para iniciantes.
-        </p>
-        <div class="badges" aria-label="Métricas do aplicativo Aprendendo Python">
-          <span class="badge warn">app novo</span>
-          <span class="badge ok">+1.500 downloads</span>
-          <span class="badge ok">nota 5.0</span>
-          <span class="badge ok">+10 avaliações</span>
-        </div>
-        <div class="buttons">
-          <a class="btn btn-gp" aria-label="Abrir Aprendendo Python no Google Play"
-             href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendopyhton" target="_blank" rel="noopener">Google Play</a>
-                    <a class="btn btn-ios" aria-label="Abrir Aprendendo SQL na Apple Store"
-             href="https://apps.apple.com/us/app/aprendendo-python/id6747948627" target="_blank" rel="noopener">Apple Store</a>
-        </div>
-      </article>
-
-    </section>
-
-    <p class="notice" role="note">
-      * Alguns recursos (como aulas premium, áudios e certificação) podem variar por plataforma. 
-    </p>
-
-    <section class="about" aria-label="Sobre o criador">
+    <section id="sobre" class="about" aria-label="Sobre o criador">
       <h3>Sobre o Criador</h3>
       <p>
         Olá! Eu sou <strong>Airton Freitas</strong>, desenvolvedor único por trás dos apps <em>Aprendendo SQL</em>, <em>Aprendendo Python</em> e <em>Aprendendo Flutter</em>. 
@@ -943,9 +827,9 @@
   </main>
 
   <footer>
-    <p>Contato: <a href="mailto:contact@devlearningapps.com">contact@devlearningapps.com</a></p>
-    <p>&copy; 2025 DevLearning. Todos os direitos reservados.</p>
-    <p><a href="privacy-policy.html">Política de Privacidade</a></p>
+    <div class="container" style="display:flex; flex-direction:column; gap:10px; align-items:center;">
+      <p>&copy; 2025 DevLearning. Todos os direitos reservados. <a href="privacy-policy.html">Política de Privacidade</a></p>
+    </div>
   </footer>
 
   <!-- JSON-LD (SoftwareApplication) -->
@@ -1005,7 +889,7 @@
   }
   </script>
 
-  <!-- JavaScript para o carrossel -->
+  <!-- JavaScript para o carrossel das seções -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Função para inicializar um carrossel específico
@@ -1072,5 +956,9 @@
       });
     });
   </script>
+  <!-- JavaScript do banner/carrossel principal -->
+  <script src="assets/js/banner-loader-simple.js"></script>
+  <script src="assets/js/hero.js"></script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
