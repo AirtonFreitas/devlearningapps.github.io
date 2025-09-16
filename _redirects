@@ -1,0 +1,13 @@
+# Redirects for GitHub Pages / Netlify
+# HTTP to HTTPS
+http://devlearningapps.com/* https://devlearningapps.com/:splat 301!
+http://www.devlearningapps.com/* https://devlearningapps.com/:splat 301!
+
+# WWW to non-WWW
+https://www.devlearningapps.com/* https://devlearningapps.com/:splat 301!
+
+# Trailing slash handling
+/*/ /:splat 301!
+
+# SPA fallback for client-side routing
+/* /index.html 200

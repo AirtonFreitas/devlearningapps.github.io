@@ -2,6 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /assets/images/banner/
 Disallow: /assets/home-carousel/
+Disallow: /*.json$
+Disallow: /node_modules/
 Crawl-delay: 1
 
 # Sitemaps
@@ -9,3 +11,12 @@ Sitemap: https://devlearningapps.com/sitemap.xml
 
 # Host
 Host: https://devlearningapps.com
+
+# Specific bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

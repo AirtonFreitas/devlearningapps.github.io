@@ -31,8 +31,25 @@
   <meta name="twitter:creator" content="@devlearningapps">
 
   <link rel="icon" href="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Preconnect para fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Preload da fonte principal -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+  
   <link rel="stylesheet" href="assets/css/components.css">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://devlearningapps.com/" />
+  
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="pt" href="https://devlearningapps.com/" />
+  <link rel="alternate" hreflang="en" href="https://devlearningapps.com/en/" />
+  <link rel="alternate" hreflang="es" href="https://devlearningapps.com/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://devlearningapps.com/" />
   
   <!-- Dados Estruturados (JSON-LD) -->
   <script type="application/ld+json">
@@ -58,6 +75,41 @@
       "price": "0",
       "priceCurrency": "BRL"
     }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Dev Learning Apps",
+    "url": "https://devlearningapps.com",
+    "description": "Aprenda programação do zero com nossos apps educativos",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://devlearningapps.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Dev Learning Apps",
+      "url": "https://devlearningapps.com"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://devlearningapps.com/"
+      }
+    ]
   }
   </script>
   
@@ -685,10 +737,10 @@
 <body>
   <header class="site-header">
     <div class="header-top">
-      <a href="#home" class="brand" aria-label="Dev Learning Apps">
-        <img src="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" alt="DevLearning Logo" class="brand-logo" />
-        <span class="brand-name">Dev Learning Apps</span>
-      </a>
+            <a href="#home" class="brand" aria-label="Dev Learning Apps">
+              <img src="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" alt="Logo Dev Learning Apps - Aprenda programação do zero" class="brand-logo" />
+              <span class="brand-name">Dev Learning Apps</span>
+            </a>
       <nav class="main-nav" aria-label="Principal">
         <a href="#home">Home</a>
         <a href="apps.html">Nossos Apps</a>

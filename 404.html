@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página não encontrada - 404 | Dev Learning Apps</title>
+  <meta name="description" content="A página que você está procurando não foi encontrada. Volte para a página inicial e explore nossos apps de programação.">
+  <meta name="robots" content="noindex, follow">
+  
+  <link rel="icon" href="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" />
+  <link rel="canonical" href="https://devlearningapps.com/404.html" />
+  
+  <!-- Preconnect para fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+  
+  <link rel="stylesheet" href="assets/css/components.css">
+  
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      background: var(--bg);
+    }
+    
+    .error-content {
+      max-width: 600px;
+    }
+    
+    .error-code {
+      font-size: 8rem;
+      font-weight: 700;
+      color: var(--neo);
+      margin: 0;
+      line-height: 1;
+    }
+    
+    .error-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 20px 0 10px;
+    }
+    
+    .error-description {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 30px;
+      line-height: 1.6;
+    }
+    
+    .error-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .btn-primary {
+      background: var(--neo);
+      color: #0b1b22;
+    }
+    
+    .btn-primary:hover {
+      background: var(--neo-2);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--card-border);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--card);
+      border-color: var(--neo);
+    }
+    
+    @media(max-width: 768px) {
+      .error-code { font-size: 6rem }
+      .error-title { font-size: 1.5rem }
+      .error-actions { flex-direction: column; align-items: center }
+      .btn { width: 100%; max-width: 280px }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-page">
+    <div class="error-content">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">Página não encontrada</h2>
+      <p class="error-description">
+        A página que você está procurando não existe ou foi movida. 
+        Que tal explorar nossos apps de programação?
+      </p>
+      
+      <div class="error-actions">
+        <a href="/" class="btn btn-primary">Voltar ao início</a>
+        <a href="/apps.html" class="btn btn-secondary">Ver nossos apps</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
