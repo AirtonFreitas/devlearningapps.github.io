@@ -403,5 +403,13 @@ document.addEventListener('DOMContentLoaded', () => {
   window.i18n = new I18nManager();
 });
 
+// Fallback para caso o DOM já esteja carregado
+if (document.readyState === 'loading') {
+  // DOM ainda carregando, aguarda o evento
+} else {
+  // DOM já carregado, inicializa imediatamente
+  window.i18n = new I18nManager();
+}
+
 // Exporta para uso global
 window.I18nManager = I18nManager;
