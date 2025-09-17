@@ -40,7 +40,34 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
   
+  <!-- Preload da primeira imagem do banner para carregamento mais rápido -->
+  <link rel="preload" href="assets/home-carousel/banner-01.png" as="image" type="image/png">
+  
   <link rel="stylesheet" href="assets/css/components.css">
+  
+  <style>
+    /* Indicador de carregamento do banner */
+    .hero-loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 255, 224, 0.3);
+      border-top: 3px solid var(--neo);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 16px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .hero-loading p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://devlearningapps.com/" />
@@ -742,9 +769,9 @@
               <span class="brand-name">Dev Learning Apps</span>
             </a>
       <nav class="main-nav" aria-label="Principal">
-        <a href="#home">Home</a>
-        <a href="apps.html">Nossos Apps</a>
-        <a href="ajuda.html">Ajuda</a>
+        <a href="#home" data-i18n="nav_home">Home</a>
+        <a href="apps.html" data-i18n="nav_our_apps">Nossos Apps</a>
+        <a href="ajuda.html" data-i18n="nav_help">Ajuda</a>
       </nav>
       <div class="header-actions"></div>
     </div>
@@ -765,8 +792,8 @@
   <section class="work-reality">
     <div class="container">
       <div class="work-content">
-        <h1>O Futuro do Trabalho é Agora</h1>
-        <p class="work-subtitle">
+        <h1 data-i18n="home_work_future_title">O Futuro do Trabalho é Agora</h1>
+        <p class="work-subtitle" data-i18n="home_work_subtitle">
           <strong>Home office, trabalho remoto e flexibilidade</strong> não são mais tendências - são a realidade atual. 
           Profissionais de tecnologia precisam se adaptar constantemente e aprender novas habilidades.
         </p>
@@ -774,27 +801,27 @@
           <div class="highlight-item">
             <div class="highlight-icon">🏠</div>
             <div class="highlight-text">
-              <h3>Home Office</h3>
-              <p>Mais de 40% dos profissionais trabalham remotamente</p>
+              <h3 data-i18n="home_work_highlight_home_office_title">Home Office</h3>
+              <p data-i18n="home_work_highlight_home_office_description">Mais de 40% dos profissionais trabalham remotamente</p>
             </div>
           </div>
           <div class="highlight-item">
             <div class="highlight-icon">💻</div>
             <div class="highlight-text">
-              <h3>Habilidades Digitais</h3>
-              <p>Programação e tecnologia são essenciais para o futuro</p>
+              <h3 data-i18n="home_work_highlight_digital_skills_title">Habilidades Digitais</h3>
+              <p data-i18n="home_work_highlight_digital_skills_description">Programação e tecnologia são essenciais para o futuro</p>
             </div>
           </div>
           <div class="highlight-item">
             <div class="highlight-icon">📱</div>
             <div class="highlight-text">
-              <h3>Aprenda em Qualquer Lugar</h3>
-              <p>Estude no seu tempo, no seu ritmo, onde estiver</p>
+              <h3 data-i18n="home_work_highlight_learn_anywhere_title">Aprenda em Qualquer Lugar</h3>
+              <p data-i18n="home_work_highlight_learn_anywhere_description">Estude no seu tempo, no seu ritmo, onde estiver</p>
             </div>
           </div>
         </div>
         <div class="work-cta">
-          <p>
+          <p data-i18n="home_work_cta_text">
             <strong>Não fique para trás.</strong> Aprenda as linguagens mais demandadas do mercado 
             com nossos apps práticos e acessíveis. Comece hoje mesmo sua jornada na programação.
           </p>
@@ -880,7 +907,7 @@
 
   <footer>
     <div class="container" style="display:flex; flex-direction:column; gap:10px; align-items:center;">
-      <p>&copy; 2025 DevLearning. Todos os direitos reservados. <a href="privacy-policy.html">Política de Privacidade</a></p>
+      <p><span data-i18n="footer_copyright">&copy; 2025 DevLearning. Todos os direitos reservados.</span> <a href="privacy-policy.html" data-i18n="footer_privacy_policy">Política de Privacidade</a></p>
     </div>
   </footer>
 

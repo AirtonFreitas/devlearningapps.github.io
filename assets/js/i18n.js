@@ -249,6 +249,8 @@ class I18nManager {
   async changeLanguage(newLanguage) {
     if (newLanguage === this.currentLanguage) return;
     
+    console.log(`🔄 Mudando idioma de ${this.currentLanguage} para ${newLanguage}`);
+    
     this.currentLanguage = newLanguage;
     
     // Atualiza a URL
@@ -259,9 +261,25 @@ class I18nManager {
       window.history.pushState({}, '', newPath);
     }
     
+    // Atualiza o atributo lang do HTML
+    document.documentElement.lang = this.getLanguageCode(newLanguage);
+    
     // Recarrega as traduções
     await this.loadTranslations();
     this.applyTranslations();
+    
+    // Recarrega o carrossel de banners se existir
+    this.reloadBannerCarousel();
+    
+    // Atualiza o seletor de idioma
+    this.updateLanguageSwitcher();
+    
+    // Dispara evento customizado para outros sistemas
+    document.dispatchEvent(new CustomEvent('languageChanged', {
+      detail: { language: newLanguage }
+    }));
+    
+    console.log(`✅ Idioma alterado para ${newLanguage}`);
   }
 
   /**
@@ -291,6 +309,38 @@ class I18nManager {
    */
   isLoading() {
     return this.loading;
+  }
+
+  /**
+   * Obtém o código de idioma completo (pt-BR, en-US, es-ES)
+   */
+  getLanguageCode(language) {
+    const codes = {
+      'pt': 'pt-BR',
+      'en': 'en-US',
+      'es': 'es-ES'
+    };
+    return codes[language] || 'pt-BR';
+  }
+
+  /**
+   * Recarrega o carrossel de banners com o novo idioma
+   */
+  reloadBannerCarousel() {
+    if (window.reloadBannerCarousel) {
+      console.log('🔄 Recarregando carrossel de banners...');
+      window.reloadBannerCarousel();
+    }
+  }
+
+  /**
+   * Atualiza o seletor de idioma para refletir o idioma atual
+   */
+  updateLanguageSwitcher() {
+    const select = document.querySelector('#language-select');
+    if (select) {
+      select.value = this.currentLanguage;
+    }
   }
 }
 

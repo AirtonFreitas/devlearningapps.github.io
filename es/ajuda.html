@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Centro de Ayuda y Soporte | Dev Learning Apps - FAQ y Contacto</title>
+  <meta name="description" content="Centro de ayuda completo para las apps DevLearning. FAQ detallado, recuperación de contraseña, problemas de premium, contacto por email y formulario. Soporte 24/7.">
+  <meta name="keywords" content="ayuda DevLearning, soporte apps programación, FAQ programación, contacto DevLearning, recuperar contraseña, problemas premium, soporte técnico, centro ayuda">
+  <meta name="author" content="Dev Learning Apps">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="es-ES">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ayuda y Soporte • Dev Learning Apps">
+  <meta property="og:description" content="Centro de ayuda y soporte para las apps DevLearning. FAQ, contacto y soluciones para problemas comunes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devlearningapps.com/es/ajuda.html">
+  <meta property="og:image" content="https://devlearningapps.com/assets/images/devlearning-cover.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ayuda y Soporte • Dev Learning Apps">
+  <meta name="twitter:description" content="Centro de ayuda y soporte para las apps DevLearning. FAQ, contacto y soluciones para problemas comunes.">
+  <meta name="twitter:image" content="https://devlearningapps.com/assets/images/devlearning-cover.png">
+
+  <link rel="icon" href="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" />
+  
+  <!-- Preconnect para fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Preload da fonte principal -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+  
+  <link rel="stylesheet" href="../assets/css/components.css">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://devlearningapps.com/es/ajuda.html" />
+  
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="pt-BR" href="https://devlearningapps.com/ajuda.html" />
+  <link rel="alternate" hreflang="en" href="https://devlearningapps.com/en/ajuda.html" />
+  <link rel="alternate" hreflang="es" href="https://devlearningapps.com/es/ajuda.html" />
+  <link rel="alternate" hreflang="x-default" href="https://devlearningapps.com/ajuda.html" />
+  
+  <!-- Dados Estruturados (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Olvidé mi contraseña. Cómo recuperarla?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Toca en \"Olvidé mi contraseña\" y sigue el correo electrónico de recuperación. Verifica Spam/Papelera y confirma el correo electrónico introducido."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo usar la misma cuenta en más de un dispositivo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Inicia sesión con el mismo correo electrónico. El progreso y el premium se sincronizan al abrir conectado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cambié de móvil. ¿Perderé mi acceso?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Instala la app e inicia sesión con el mismo correo electrónico. Si no se desbloquea, usa \"Restaurar acceso\"."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg1:#0f2027; --bg2:#203a43; --bg3:#2c5364;
+      --neo:#00ffe0; --neo-2:#007cf0; --text:#e0e0e0; --muted:#9aa7ad;
+      --card:#ffffff0f; --card-border:#ffffff1a; --ok:#15d36b; --warn:#4b400;
+    }
+    *{ box-sizing:border-box }
+    html, body{ height:100% }
+    body{
+      margin:0; font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+      background: linear-gradient(90deg, var(--bg1), var(--bg3));
+      color: var(--text);
+    }
+    .site-header{
+      background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-top{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .brand-logo{
+      height: 40px;
+      filter: drop-shadow(0 0 4px #00ffe0aa);
+    }
+    .brand-name{
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .main-nav{
+      display: flex;
+      gap: 24px;
+    }
+    .main-nav a{
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .main-nav a:hover,
+    .main-nav a.is-active{
+      color: var(--neo);
+    }
+    .container{
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 16px;
+    }
+    .page-header{
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .page-header h1{
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0 0 16px;
+      background: linear-gradient(90deg, var(--text), var(--neo));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-header p{
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0;
+    }
+    .faq-section{
+      margin-bottom: 48px;
+    }
+    .faq-item{
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .faq-question{
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s ease;
+    }
+    .faq-question:hover{
+      background: rgba(0, 255, 224, 0.05);
+    }
+    .faq-question span:first-child{
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .faq-icon{
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.rotated{
+      transform: rotate(180deg);
+    }
+    .faq-answer{
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-answer.show{
+      max-height: 200px;
+      padding: 0 20px 20px;
+    }
+    .faq-answer p{
+      margin: 0;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+    .contact-section{
+      text-align: center;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 40px;
+    }
+    .contact-section h3{
+      font-size: 1.5rem;
+      margin: 0 0 16px;
+      color: var(--neo);
+    }
+    .contact-section p{
+      color: var(--muted);
+      margin: 0 0 24px;
+    }
+    .contact-email{
+      display: inline-block;
+      background: linear-gradient(90deg, var(--neo), var(--neo-2));
+      color: #000;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+    .contact-email:hover{
+      transform: translateY(-2px);
+    }
+    .form-wrapper{
+      margin-top: 24px;
+    }
+    .form-wrapper iframe{
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+      .header-top{
+        flex-direction: column;
+        gap: 16px;
+      }
+      .main-nav{
+        gap: 16px;
+      }
+      .page-header h1{
+        font-size: 2rem;
+      }
+      .faq-question{
+        padding: 16px;
+      }
+      .contact-section{
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="../index.html#home" class="brand" aria-label="Dev Learning Apps">
+        <img src="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" alt="DevLearning Logo" class="brand-logo" />
+        <span class="brand-name">Dev Learning Apps</span>
+      </a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="../index.html#home" data-i18n="nav_home">Inicio</a>
+        <a href="apps.html" data-i18n="nav_our_apps">Nuestras Apps</a>
+        <a href="ajuda.html" class="is-active" data-i18n="nav_help">Ayuda</a>
+      </nav>
+      <div class="header-actions"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1 data-i18n="help_page_title">Centro de Ayuda</h1>
+      <p data-i18n="help_page_subtitle">Encuentra respuestas rápidas a tus preguntas sobre nuestras apps</p>
+    </div>
+
+    <section class="faq-section">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="help_faq_forgot_password_q">¿Olvidé mi contraseña. Cómo recuperarla?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p data-i18n="help_faq_forgot_password_a">Toca en "Olvidé mi contraseña" y sigue el correo electrónico de recuperación. Verifica Spam/Papelera y confirma el correo electrónico introducido.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="help_faq_multiple_devices_q">¿Puedo usar la misma cuenta en más de un dispositivo?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p data-i18n="help_faq_multiple_devices_a">Sí. Inicia sesión con el mismo correo electrónico. El progreso y el premium se sincronizan al abrir conectado.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="help_faq_changed_phone_q">Cambié de móvil. ¿Perderé mi acceso?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p data-i18n="help_faq_changed_phone_a">No. Instala la app e inicia sesión con el mismo correo electrónico. Si no se desbloquea, usa "Restaurar acceso".</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="help_faq_premium_not_activated_q">Pagué y el premium no se activó. ¿Qué hago?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p data-i18n="help_faq_premium_not_activated_a">Vuelve a abrir la app online, verifica la cuenta de compra y toca en "Restaurar acceso". Si persiste, envía el comprobante.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="help_faq_full_pass_website_q">Compré el Pase Completo en la web. ¿Cómo lo uso en las apps?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p data-i18n="help_faq_full_pass_website_a">Inicia sesión con el mismo correo electrónico utilizado en la web y ve a Perfil → Restaurar acceso.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="help_faq_separate_premium_q">¿Puedo comprar el premium de cada app por separado?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p data-i18n="help_faq_separate_premium_a">Sí. Cada app tiene su propio precio. El Pase Completo desbloquea todas.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="help_faq_duplicate_charge_q">Recibí un cargo duplicado. ¿Cómo proceder?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p data-i18n="help_faq_duplicate_charge_a">Verifica el historial de pedidos de la tienda/web y envía el comprobante a través del formulario.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="help_faq_report_bug_q">¿Cómo reportar un error?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p data-i18n="help_faq_report_bug_a">Envía una descripción, pasos, capturas de pantalla/video, modelo del dispositivo, versión del SO y de la app a través del formulario.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="help_faq_bought_with_other_account_q">Compré con otra cuenta de la tienda.</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p data-i18n="help_faq_bought_with_other_account_a">El acceso está vinculado a la cuenta de compra. Envía el pedido y la cuenta correcta para que evaluemos las opciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h3 data-i18n="help_contact_section_title">¿No encontraste tu respuesta?</h3>
+      <p data-i18n="help_contact_section_subtitle">Contáctanos y te responderemos lo antes posible</p>
+      
+      <div style="margin: 30px 0;">
+        <a href="mailto:contact@devlearningapps.com" class="contact-email" style="font-size: 1.2rem; padding: 16px 32px;">contact@devlearningapps.com</a>
+        <p style="margin: 16px 0 0; color: var(--muted); font-size: 0.9rem;" data-i18n="help_contact_or_use_form">O usa el formulario a continuación:</p>
+      </div>
+      
+      <section class="form-wrapper">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSe4EO4cLxgZq3buN8Fwu5bmH4QyJdYRBOiOlhCscgfriy_Akg/viewform?embedded=true"
+          loading="lazy"
+        ></iframe>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('.faq-icon');
+      
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        icon.classList.remove('rotated');
+      } else {
+        answer.classList.add('show');
+        icon.classList.add('rotated');
+      }
+    }
+  </script>
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+</body>
+</html>

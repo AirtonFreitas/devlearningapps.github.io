@@ -5,6 +5,12 @@
   
   // Detectar idioma atual
   function detectLocale() {
+    // Primeiro tenta usar o sistema i18n se estiver disponível
+    if (window.i18n && window.i18n.getCurrentLanguage) {
+      return window.i18n.getCurrentLanguage();
+    }
+    
+    // Fallback para detecção pelo HTML lang
     const htmlLang = document.documentElement.lang || 'pt';
     if (htmlLang.startsWith('en')) return 'en';
     if (htmlLang.startsWith('es')) return 'es';
@@ -130,7 +136,7 @@
     };
   }
   
-  // Criar slide com conteúdo
+  // Criar slide com conteúdo - OTIMIZADO
   function createSlide(imageFile, index, total) {
     const text = getImageText(imageFile.fileName);
     const isFirst = index === 0;
@@ -148,6 +154,7 @@
           alt="${text.alt}"
           ${isFirst ? '' : 'loading="lazy"'}
           ${isFirst ? 'fetchpriority="high"' : ''}
+          ${isFirst ? 'decoding="sync"' : 'decoding="async"'}
         />
         <div class="hero-slide-overlay"></div>
       </div>
@@ -171,34 +178,68 @@
     return slide;
   }
   
-  // Listar arquivos de imagem da pasta
+  // Listar arquivos de imagem da pasta - OTIMIZADO
   async function getImageFiles() {
-    const imageExtensions = ['jpg', 'jpeg', 'png', 'webp', 'avif'];
+    const imageExtensions = ['png', 'jpg', 'jpeg', 'webp', 'avif']; // PNG primeiro (mais comum)
     const files = [];
     
-    // Tentar carregar cada possível arquivo
-    for (let i = 1; i <= 20; i++) {
-      for (const ext of imageExtensions) {
-        const fileName = `banner-${i.toString().padStart(2, '0')}.${ext}`;
-        const imagePath = `assets/home-carousel/${fileName}`;
-        
-        try {
-          const img = new Image();
-          await new Promise((resolve, reject) => {
-            img.onload = () => resolve(true);
-            img.onerror = () => reject(false);
-            img.src = imagePath;
-          });
-          files.push({
-            fileName: fileName,
-            path: imagePath,
-            name: fileName.replace(/\.[^/.]+$/, ''),
-            extension: ext
-          });
-          console.log('✅ Imagem encontrada:', fileName);
-          break; // Se encontrou a imagem, não precisa testar outras extensões
-        } catch (e) {
-          // Arquivo não existe, continuar
+    // Lista conhecida de imagens (baseada no que existe na pasta)
+    const knownImages = ['banner-01.png', 'banner-02.png', 'banner-03.png'];
+    
+    // Carregar imagens conhecidas em paralelo (mais rápido)
+    const imagePromises = knownImages.map(async (fileName) => {
+      const imagePath = `assets/home-carousel/${fileName}`;
+      
+      try {
+        const img = new Image();
+        await new Promise((resolve, reject) => {
+          img.onload = () => resolve(true);
+          img.onerror = () => reject(false);
+          img.src = imagePath;
+        });
+        console.log('✅ Imagem conhecida carregada:', fileName);
+        return {
+          fileName: fileName,
+          path: imagePath,
+          name: fileName.replace(/\.[^/.]+$/, ''),
+          extension: fileName.split('.').pop()
+        };
+      } catch (e) {
+        console.warn('⚠️ Imagem conhecida não encontrada:', fileName);
+        return null;
+      }
+    });
+    
+    // Aguardar todas as imagens carregarem em paralelo
+    const results = await Promise.all(imagePromises);
+    files.push(...results.filter(result => result !== null));
+    
+    // Se não encontrou nenhuma imagem conhecida, fazer busca sequencial limitada
+    if (files.length === 0) {
+      console.log('🔍 Fazendo busca sequencial...');
+      for (let i = 1; i <= 5; i++) { // Reduzido de 20 para 5
+        for (const ext of imageExtensions) {
+          const fileName = `banner-${i.toString().padStart(2, '0')}.${ext}`;
+          const imagePath = `assets/home-carousel/${fileName}`;
+          
+          try {
+            const img = new Image();
+            await new Promise((resolve, reject) => {
+              img.onload = () => resolve(true);
+              img.onerror = () => reject(false);
+              img.src = imagePath;
+            });
+            files.push({
+              fileName: fileName,
+              path: imagePath,
+              name: fileName.replace(/\.[^/.]+$/, ''),
+              extension: ext
+            });
+            console.log('✅ Imagem encontrada:', fileName);
+            break; // Se encontrou a imagem, não precisa testar outras extensões
+          } catch (e) {
+            // Arquivo não existe, continuar
+          }
         }
       }
     }
@@ -207,7 +248,7 @@
     return files.sort((a, b) => a.fileName.localeCompare(b.fileName));
   }
   
-  // Atualizar carrossel
+  // Atualizar carrossel - OTIMIZADO
   function updateCarousel(images) {
     const carousel = document.querySelector('.hero-carousel');
     if (!carousel || images.length === 0) {
@@ -217,6 +258,12 @@
     
     const slidesContainer = carousel.querySelector('.hero-slides') || createSlidesContainer();
     const dotsContainer = carousel.querySelector('.hero-dots');
+    
+    // Remover indicador de carregamento se existir
+    const loadingIndicator = carousel.querySelector('.hero-loading');
+    if (loadingIndicator) {
+      loadingIndicator.remove();
+    }
     
     // Limpar conteúdo existente
     slidesContainer.innerHTML = '';
@@ -258,26 +305,62 @@
     return slidesContainer;
   }
   
-  // Inicializar carrossel
+  // Mostrar indicador de carregamento
+  function showLoadingIndicator() {
+    const carousel = document.querySelector('.hero-carousel');
+    if (!carousel) return;
+    
+    const loadingDiv = document.createElement('div');
+    loadingDiv.className = 'hero-loading';
+    loadingDiv.innerHTML = `
+      <div class="hero-loading-spinner"></div>
+      <p>Carregando banners...</p>
+    `;
+    loadingDiv.style.cssText = `
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: var(--text);
+      z-index: 10;
+    `;
+    
+    carousel.appendChild(loadingDiv);
+  }
+  
+  // Inicializar carrossel - OTIMIZADO
   async function initBannerCarousel() {
     console.log('🚀 Inicializando carrossel...');
     currentLocale = detectLocale();
     console.log('🌐 Idioma detectado:', currentLocale);
     
-    // Carregar captions primeiro
-    await loadCaptions();
+    // Mostrar indicador de carregamento
+    showLoadingIndicator();
     
-    // Depois carregar imagens
-    const imageFiles = await getImageFiles();
-    console.log('🖼️ Imagens encontradas:', imageFiles);
-    
-    updateCarousel(imageFiles);
-    
-    // Re-inicializar o carrossel se já existir
-    if (window.initHeroCarousel) {
-      const carousel = document.querySelector('.hero-carousel');
-      if (carousel) {
-        window.initHeroCarousel(carousel);
+    try {
+      // Carregar captions primeiro
+      await loadCaptions();
+      
+      // Depois carregar imagens
+      const imageFiles = await getImageFiles();
+      console.log('🖼️ Imagens encontradas:', imageFiles);
+      
+      updateCarousel(imageFiles);
+      
+      // Re-inicializar o carrossel se já existir
+      if (window.initHeroCarousel) {
+        const carousel = document.querySelector('.hero-carousel');
+        if (carousel) {
+          window.initHeroCarousel(carousel);
+        }
+      }
+    } catch (error) {
+      console.error('❌ Erro ao carregar carrossel:', error);
+      // Remover indicador de carregamento em caso de erro
+      const loadingIndicator = document.querySelector('.hero-loading');
+      if (loadingIndicator) {
+        loadingIndicator.remove();
       }
     }
   }
@@ -291,4 +374,11 @@
   
   // Expor função para re-inicialização se necessário
   window.reloadBannerCarousel = initBannerCarousel;
+  
+  // Listener para mudanças de idioma
+  document.addEventListener('languageChanged', (event) => {
+    console.log('🌐 Idioma alterado detectado, recarregando banners...');
+    currentLocale = event.detail.language;
+    initBannerCarousel();
+  });
 })();
