@@ -17,19 +17,37 @@ class I18nManager {
   detectLanguage() {
     const path = window.location.pathname;
     
-    // Verifica se há idioma na URL (/pt/, /en/, /es/)
-    const urlMatch = path.match(/^\/(pt|en|es)\//);
-    if (urlMatch) {
-      return urlMatch[1];
+    // Verifica se há idioma na URL (/en/, /es/)
+    if (path.startsWith('/en/') || path === '/en') {
+      return 'en';
+    }
+    if (path.startsWith('/es/') || path === '/es') {
+      return 'es';
     }
     
-    // Verifica se está na raiz (padrão português)
-    if (path === '/' || path === '/index.html') {
-      return 'pt';
-    }
-    
-    // Fallback para português
+    // Padrão português para raiz ou outros paths
     return 'pt';
+  }
+
+  /**
+   * Remove prefixos de idioma duplicados da URL
+   */
+  cleanUrlFromLanguagePrefixes(path) {
+    let cleanPath = path;
+    
+    // Remove prefixos de idioma múltiplos (ex: /en/es/ -> /)
+    cleanPath = cleanPath.replace(/^\/(pt|en|es)(?:\/(pt|en|es))*\//, '/');
+    
+    // Remove prefixo de idioma simples (ex: /en/ -> /)
+    cleanPath = cleanPath.replace(/^\/(pt|en|es)\//, '/');
+    
+    // Garantir que não tenha duplicação de barras
+    cleanPath = cleanPath.replace(/\/+/g, '/');
+    
+    // Se ficou vazio, usar raiz
+    if (cleanPath === '') cleanPath = '/';
+    
+    return cleanPath;
   }
 
   /**
@@ -37,11 +55,29 @@ class I18nManager {
    */
   async init() {
     try {
+      // Corrige URL malformada se necessário
+      this.fixMalformedUrl();
+      
       await this.loadTranslations();
       this.applyTranslations();
       this.setupLanguageSwitcher();
+      
+      console.log(`✅ Sistema i18n inicializado - Idioma: ${this.currentLanguage}`);
     } catch (error) {
-      console.error('Erro ao inicializar i18n:', error);
+      console.error('❌ Erro ao inicializar i18n:', error);
+    }
+  }
+
+  /**
+   * Corrige URLs malformadas (ex: /en/es/ -> /es/)
+   */
+  fixMalformedUrl() {
+    const currentPath = window.location.pathname;
+    const cleanPath = this.cleanUrlFromLanguagePrefixes(currentPath);
+    
+    // Se a URL foi limpa e mudou, corrige automaticamente
+    if (cleanPath !== currentPath) {
+      window.history.replaceState({}, '', cleanPath);
     }
   }
 
@@ -54,13 +90,17 @@ class I18nManager {
     this.loading = true;
     
     try {
-      const response = await fetch(`/assets/i18n/${this.currentLanguage}.json`);
+      const url = `/assets/i18n/${this.currentLanguage}.json`;
+      const response = await fetch(url);
+      
       if (!response.ok) {
         throw new Error(`Erro ao carregar traduções: ${response.status}`);
       }
+      
       this.translations = await response.json();
+      console.log(`✅ Traduções carregadas para ${this.currentLanguage}`);
     } catch (error) {
-      console.error('Erro ao carregar traduções:', error);
+      console.error('❌ Erro ao carregar traduções:', error);
       // Fallback para português em caso de erro
       if (this.currentLanguage !== 'pt') {
         this.currentLanguage = 'pt';
@@ -80,10 +120,13 @@ class I18nManager {
     this.updateMetaTags();
     
     // Atualiza elementos com data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(element => {
+    const elements = document.querySelectorAll('[data-i18n]');
+    
+    elements.forEach(element => {
       const key = element.getAttribute('data-i18n');
       const translation = this.getTranslation(key);
-      if (translation) {
+      
+      if (translation && translation !== key) {
         if (element.tagName === 'INPUT' && element.type === 'text') {
           element.placeholder = translation;
         } else {
@@ -184,7 +227,6 @@ class I18nManager {
       if (translation && typeof translation === 'object' && k in translation) {
         translation = translation[k];
       } else {
-        console.warn(`Tradução não encontrada para: ${key}`);
         return key; // Retorna a chave se não encontrar a tradução
       }
     }
@@ -238,9 +280,11 @@ class I18nManager {
 
     // Adiciona evento de mudança de idioma
     const select = languageSwitcher.querySelector('#language-select');
-    select.addEventListener('change', (e) => {
-      this.changeLanguage(e.target.value);
-    });
+    if (select) {
+      select.addEventListener('change', (e) => {
+        this.changeLanguage(e.target.value);
+      });
+    }
   }
 
   /**
@@ -248,8 +292,6 @@ class I18nManager {
    */
   async changeLanguage(newLanguage) {
     if (newLanguage === this.currentLanguage) return;
-    
-    console.log(`🔄 Mudando idioma de ${this.currentLanguage} para ${newLanguage}`);
     
     this.currentLanguage = newLanguage;
     
@@ -286,8 +328,20 @@ class I18nManager {
    * Atualiza a URL para incluir o idioma
    */
   updateUrlForLanguage(path, language) {
-    // Remove idioma atual se existir
-    const cleanPath = path.replace(/^\/(pt|en|es)\//, '/');
+    // Remove TODOS os prefixos de idioma existentes (pt, en, es)
+    let cleanPath = path;
+    
+    // Remove prefixos de idioma múltiplos (ex: /en/es/ -> /)
+    cleanPath = cleanPath.replace(/^\/(pt|en|es)(?:\/(pt|en|es))*\//, '/');
+    
+    // Remove prefixo de idioma simples (ex: /en/ -> /)
+    cleanPath = cleanPath.replace(/^\/(pt|en|es)\//, '/');
+    
+    // Garantir que não tenha duplicação de barras
+    cleanPath = cleanPath.replace(/\/+/g, '/');
+    
+    // Se ficou vazio, usar raiz
+    if (cleanPath === '') cleanPath = '/';
     
     // Adiciona novo idioma (exceto para português que fica na raiz)
     if (language === 'pt') {
