@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Programming Apps - Learning Python, SQL, Flutter and HTML | Dev Learning Apps</title>
+  <meta name="description" content="Discover all our programming apps: Learning Python, SQL, Flutter and HTML. Over 1,500 downloads, 4.8 rating. Practical lessons, integrated IDE and certification.">
+  <meta name="keywords" content="programming apps, learn Python, SQL course, Flutter course, HTML course, mobile programming, educational apps, DevLearning, Python for beginners, SQL for beginners, Flutter for beginners, HTML for beginners">
+  <meta name="author" content="Dev Learning Apps">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="en-US">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Programming Apps • Dev Learning Apps">
+  <meta property="og:description" content="Complete list of DevLearning apps: Learning SQL, Python, Flutter and HTML. Practical and accessible content.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devlearningapps.com/en/apps.html">
+  <meta property="og:image" content="https://devlearningapps.com/assets/images/devlearning-cover.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Programming Apps • Dev Learning Apps">
+  <meta name="twitter:description" content="Complete list of DevLearning apps: Learning SQL, Python, Flutter and HTML. Practical and accessible content.">
+  <meta name="twitter:image" content="https://devlearningapps.com/assets/images/devlearning-cover.png">
+
+  <link rel="icon" href="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" />
+  
+  <!-- Preconnect para fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Preload da fonte principal -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+  
+  <link rel="stylesheet" href="../assets/css/components.css">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://devlearningapps.com/en/apps.html" />
+  
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="pt-BR" href="https://devlearningapps.com/apps.html" />
+  <link rel="alternate" hreflang="en" href="https://devlearningapps.com/en/apps.html" />
+  <link rel="alternate" hreflang="es" href="https://devlearningapps.com/es/apps.html" />
+  <link rel="alternate" hreflang="x-default" href="https://devlearningapps.com/apps.html" />
+  
+  <!-- Dados Estruturados (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://devlearningapps.com/en/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Our Apps",
+        "item": "https://devlearningapps.com/en/apps.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-321501252"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-321501252');
+  </script>
+
+  <style>
+    :root{
+      --bg1:#0f2027; --bg2:#203a43; --bg3:#2c5364;
+      --neo:#00ffe0; --neo-2:#007cf0; --text:#e0e0e0; --muted:#9aa7ad;
+      --card:#ffffff0f; --card-border:#ffffff1a; --ok:#15d36b; --warn:#4b400;
+    }
+    *{ box-sizing:border-box }
+    html, body{ height:100% }
+    body{
+      margin:0; font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+      background: linear-gradient(90deg, var(--bg1), var(--bg3));
+      color: var(--text);
+    }
+
+    /* Divisão visual entre seções */
+    .section-divider{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+      padding: 5px 0;
+    }
+
+    .divider-line{
+      height: 2px;
+      width: 100%;
+      max-width: 300px;
+      background: linear-gradient(90deg, transparent, var(--neo), transparent);
+      border-radius: 1px;
+    }
+
+    .section-title{
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .section-title h2{
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+      background: linear-gradient(90deg, var(--text), var(--neo));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+
+    /* Nova seção Python */
+    .python-section{
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding: 25px 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    @media(min-width: 900px){
+      .python-section{
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+      }
+    }
+
+    /* Ajustes para mobile */
+    @media (max-width: 768px) {
+      .python-section{
+        gap: 12px !important;
+        padding: 8px 16px !important;
+      }
+      
+      .python-content h2{
+        font-size: 1.5rem !important;
+      }
+      
+      .python-content .subtitle{
+        font-size: 0.8rem !important;
+        margin: 0 0 10px !important;
+        line-height: 1.3 !important;
+      }
+      
+      .python-metrics{
+        gap: 6px !important;
+        margin: 0 0 10px !important;
+      }
+      
+      .metric{
+        padding: 6px 8px !important;
+        min-width: 60px !important;
+      }
+      
+      .metric-value{
+        font-size: 1rem !important;
+      }
+      
+      .metric-label{
+        font-size: 0.7rem !important;
+      }
+      
+      .python-stores img{
+        height: 40px !important;
+      }
+      
+      .carousel-container{
+        max-height: 250px !important;
+        width: 120px !important;
+      }
+      
+      .python-carousel{
+        padding: 0 20px !important;
+      }
+      
+      .carousel-nav{
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.8rem !important;
+      }
+      
+      .carousel-nav.prev{
+        left: 15px !important;
+      }
+      
+      .carousel-nav.next{
+        right: 15px !important;
+      }
+      
+      .title-with-logo{
+        gap: 8px !important;
+        margin: 0 0 8px !important;
+      }
+      
+      .python-logo{
+        width: 30px !important;
+        height: 30px !important;
+      }
+      
+      .carousel-dots{
+        margin-top: 12px !important;
+        gap: 5px !important;
+      }
+      
+      .carousel-dot{
+        width: 8px !important;
+        height: 8px !important;
+        border-radius: 1px !important;
+      }
+    }
+
+    .python-content{
+      flex: 1;
+      text-align: left;
+    }
+
+    .title-with-logo{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 0 0 15px;
+    }
+
+    .python-logo{
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      border: 2px solid var(--neo);
+      filter: drop-shadow(0 0 8px var(--neo));
+    }
+
+    .python-content h2{
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+      background: linear-gradient(90deg, var(--text), var(--neo));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+
+    .python-content .subtitle{
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
+
+    .python-metrics{
+      display: flex;
+      gap: 15px;
+      margin: 0 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .metric{
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      text-align: center;
+      min-width: 100px;
+    }
+
+    .metric-value{
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--neo);
+      margin: 0 0 4px;
+    }
+
+    .metric-label{
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .python-stores{
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .python-stores img{
+      height: 60px;
+      transition: transform 0.2s ease;
+    }
+
+    .python-stores img:hover{
+      transform: scale(1.05);
+    }
+
+    /* Carrossel de imagens */
+    .python-carousel{
+      flex: 1;
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 0px; /* Sem padding para setas bem próximas */
+    }
+
+    .carousel-container{
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      border: 2px solid var(--neo);
+      max-height: 450px; /* Altura reduzida para formato retrato */
+      width: 200px; /* Largura reduzida para formato retrato */
+      margin: 0 auto;
+    }
+
+    .carousel-slide{
+      display: none;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .carousel-slide.active{
+      display: block;
+      opacity: 1;
+    }
+
+    .carousel-slide img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Mantém proporção original sem cortar */
+      display: block;
+    }
+
+    .carousel-slide img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Mantém proporção original sem cortar */
+      display: block;
+    }
+
+    .carousel-nav{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--neo);
+      border: none;
+      color: var(--bg1);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(0, 255, 224, 0.3);
+    }
+
+    .carousel-nav:hover{
+      background: var(--neo-2);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 255, 224, 0.5);
+    }
+
+    .carousel-nav.prev{
+      left: 10px;
+    }
+
+    .carousel-nav.next{
+      right: 10px;
+    }
+
+    .carousel-dots{
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .carousel-dot{
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      background: var(--card-border);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .carousel-dot.active{
+      background: var(--neo);
+    }
+
+    /* Seção original dos apps */
+    .apps{
+      display:grid; gap:24px; padding:40px 16px; max-width:1060px; margin:0 auto;
+      grid-template-columns: 1fr; 
+    }
+    @media(min-width:900px){
+      .apps{ grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .app-card{
+      background: var(--card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.30);
+      transition: transform .25s ease, border-color .25s ease;
+      display:flex; flex-direction:column; align-items:center; text-align:center;
+      min-height: 420px;
+    }
+    .app-card:hover{ transform: translateY(-4px); }
+    .app-card.highlight-sql{ border: 2px solid var(--neo); background: linear-gradient(135deg, #00ffe011, #2c536433); }
+
+    .app-card img.app-icon{
+      width:84px; height:84px; border-radius:16px; object-fit:cover; margin-bottom:14px; border:1px solid var(--neo);
+    }
+    .app-card h2{ margin: 8px 0 10px }
+    .app-desc{ color:#d3e7ec; margin:0 0 14px; line-height:1.5 }
+    .badges{
+      display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:14px;
+    }
+    .badge{
+      border:1px solid var(--card-border); border-radius:999px; padding:6px 12px; font-size:12px; color:#d8f5f2;
+      background: #ffffff14;
+    }
+    .badge.ok{ border-color:#1adf7a55 }
+    .badge.warn{ border-color:#f4b40055 }
+    .buttons{
+      margin-top:auto; display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
+      padding-top:4px;
+    }
+    .btn{
+      display:inline-block; text-decoration:none; font-weight:700; padding:10px 16px; border-radius:10px;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease, opacity .2s ease;
+      will-change: transform;
+    }
+    .btn:hover{ transform: translateY(-2px) }
+    .btn:focus-visible{ outline:2px dashed var(--neo); outline-offset:3px }
+
+    .btn-gp{
+      color:#000; background: linear-gradient(90deg, var(--neo), var(--neo-2));
+      box-shadow: 0 6px 14px rgba(0, 124, 240, .25);
+    }
+    .btn-ios{
+      color:#fff; background: linear-gradient(90deg, #555, #333);
+      border:1px solid #00000055;
+    }
+    .btn-disabled{
+      cursor:not-allowed; opacity:.6; color:#eee; background: linear-gradient(90deg, #777, #555);
+      border:1px dashed #999;
+    }
+
+    .notice{ text-align:center; padding: 8px 16px; color:#c6d6db; font-style:italic }
+    .container{ max-width:1060px; margin:0 auto; padding:0 16px }
+
+    .about{
+      margin: 32px 0 0; padding: 40px 0 24px; border-top:1px solid var(--card-border);
+      text-align:center;
+    }
+    .about p{ color:#d1e6eb; margin:8px auto; max-width:800px; line-height:1.6 }
+    .about a{ color: var(--neo); font-weight:700; text-decoration:none }
+    .about a:hover{ text-decoration:underline }
+
+    footer{
+      text-align:center; padding: 24px; font-size:14px; color:#bcd0d6;
+    }
+    footer a{ color: var(--neo); text-decoration:none; font-weight:600 }
+    .updated{ color: var(--muted); font-size:12px; margin-top:4px }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html#home" class="brand" aria-label="Dev Learning Apps">
+        <img src="https://airtonfreitas.github.io/devlearningapps.github.io/dev_learning.png" alt="DevLearning Logo" class="brand-logo" />
+        <span class="brand-name">Dev Learning Apps</span>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html#home">Home</a>
+        <a href="apps.html" class="is-active">Our Apps</a>
+        <a href="ajuda.html">Help</a>
+      </nav>
+      <div class="header-actions"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Seção Python em destaque -->
+    <section class="python-section" aria-label="Learning Python">
+      <div class="python-content">
+        <div class="title-with-logo">
+          <img src="../python.png" alt="Learning Python app with practical lessons" class="python-logo" />
+          <h2>Learning Python</h2>
+        </div>
+        <p class="subtitle">Learn logic and programming with Python from scratch to advanced features. Practical course with step-by-step lessons, integrated IDE and exercises for beginners.</p>
+        
+        <div class="python-metrics">
+          <div class="metric">
+            <div class="metric-value">+1,500</div>
+            <div class="metric-label">downloads</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">4.8</div>
+            <div class="metric-label">rating</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">+1,060</div>
+            <div class="metric-label">users</div>
+          </div>
+        </div>
+        
+        <div class="python-stores">
+          <a href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendopyhton" target="_blank" rel="noopener" aria-label="Open Learning Python on Google Play">
+            <img src="../assets/images/google_play.png" alt="Available on Google Play" />
+          </a>
+          <a href="https://apps.apple.com/us/app/aprendendo-python/id6747948627" target="_blank" rel="noopener" aria-label="Open Learning Python on App Store">
+            <img src="../assets/images/apple_store.png" alt="Available on App Store" />
+          </a>
+        </div>
+      </div>
+      
+      <div class="python-carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide active">
+            <img src="../assets/images/python/screens/1.png" alt="Learning Python app screenshot 1" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/python/screens/2.png" alt="Learning Python app screenshot 2" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/python/screens/3.png" alt="Learning Python app screenshot 3" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/python/screens/4.png" alt="Learning Python app screenshot 4" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/python/screens/5.png" alt="Learning Python app screenshot 5" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/python/screens/6.png" alt="Learning Python app screenshot 6" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/python/screens/7.png" alt="Learning Python app screenshot 7" />
+          </div>
+        </div>
+        
+        <button class="carousel-nav prev" aria-label="Previous image">‹</button>
+        <button class="carousel-nav next" aria-label="Next image">›</button>
+        
+        <div class="carousel-dots">
+          <button class="carousel-dot active" aria-label="Go to image 1"></button>
+          <button class="carousel-dot" aria-label="Go to image 2"></button>
+          <button class="carousel-dot" aria-label="Go to image 3"></button>
+          <button class="carousel-dot" aria-label="Go to image 4"></button>
+          <button class="carousel-dot" aria-label="Go to image 5"></button>
+          <button class="carousel-dot" aria-label="Go to image 6"></button>
+          <button class="carousel-dot" aria-label="Go to image 7"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisão visual -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Seção SQL em destaque -->
+    <section class="python-section" aria-label="Learning SQL">
+      <div class="python-content">
+        <div class="title-with-logo">
+          <img src="../sql.png" alt="Learning SQL app with database and queries" class="python-logo" />
+          <h2>Learning SQL</h2>
+        </div>
+        <p class="subtitle">Complete SQL course with guided lessons, challenges, integrated IDE and completion certificate. Learn databases and queries for exams, IT and dev career.</p>
+        
+        <div class="python-metrics">
+          <div class="metric">
+            <div class="metric-value">+44k</div>
+            <div class="metric-label">downloads</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">5.0</div>
+            <div class="metric-label">rating</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">+11.8k</div>
+            <div class="metric-label">users</div>
+          </div>
+        </div>
+        
+        <div class="python-stores">
+          <a href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendosql" target="_blank" rel="noopener" aria-label="Open Learning SQL on Google Play">
+            <img src="../assets/images/google_play.png" alt="Available on Google Play" />
+          </a>
+          <a href="https://apps.apple.com/us/app/aprendendo-sql/id6744893043" target="_blank" rel="noopener" aria-label="Open Learning SQL on App Store">
+            <img src="../assets/images/apple_store.png" alt="Available on App Store" />
+          </a>
+        </div>
+      </div>
+      
+      <div class="python-carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide active">
+            <img src="../assets/images/sql/screens/1.png" alt="Learning SQL app screenshot 1" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/sql/screens/2.png" alt="Learning SQL app screenshot 2" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/sql/screens/3.png" alt="Learning SQL app screenshot 3" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/sql/screens/4.png" alt="Learning SQL app screenshot 4" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/sql/screens/5.png" alt="Learning SQL app screenshot 5" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/sql/screens/6.png" alt="Learning SQL app screenshot 6" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/sql/screens/7.png" alt="Learning SQL app screenshot 7" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/sql/screens/8.png" alt="Learning SQL app screenshot 8" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/sql/screens/9.png" alt="Learning SQL app screenshot 9" />
+          </div>
+          <div class="carousel-slide">
+            <img src="../assets/images/sql/screens/10.png" alt="Learning SQL app screenshot 10" />
+          </div>
+        </div>
+        
+        <button class="carousel-nav prev" aria-label="Previous image">‹</button>
+        <button class="carousel-nav next" aria-label="Next image">›</button>
+        
+        <div class="carousel-dots">
+          <button class="carousel-dot active" aria-label="Go to image 1"></button>
+          <button class="carousel-dot" aria-label="Go to image 2"></button>
+          <button class="carousel-dot" aria-label="Go to image 3"></button>
+          <button class="carousel-dot" aria-label="Go to image 4"></button>
+          <button class="carousel-dot" aria-label="Go to image 5"></button>
+          <button class="carousel-dot" aria-label="Go to image 6"></button>
+          <button class="carousel-dot" aria-label="Go to image 7"></button>
+          <button class="carousel-dot" aria-label="Go to image 8"></button>
+          <button class="carousel-dot" aria-label="Go to image 9"></button>
+          <button class="carousel-dot" aria-label="Go to image 10"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisão visual -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Título da seção de todos os apps -->
+    <div class="section-title">
+      <h2>Programming Apps</h2>
+    </div>
+
+    <section class="apps" aria-label="DevLearning apps list">
+      <!-- SQL -->
+      <article class="app-card" aria-labelledby="title-sql">
+        <img class="app-icon" src="https://airtonfreitas.github.io/devlearningapps.github.io/sql.png" alt="Learning SQL app with database and queries" loading="lazy">
+        <h3 id="title-sql">Learning SQL</h3>
+        <p class="app-desc">
+          Complete SQL course with guided lessons, challenges, <strong>integrated IDE</strong> and completion certificate.
+          Learn databases and queries for exams, IT and dev career.
+        </p>
+        <div class="badges" aria-label="Learning SQL app metrics">
+          <span class="badge ok">+45,000 downloads</span>
+          <span class="badge ok">rating 5.0</span>
+          <span class="badge ok">+1,000 evaluations</span>
+        </div>
+        <div class="buttons">
+          <a class="btn btn-gp" aria-label="Open Learning SQL on Google Play"
+             href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendosql" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn btn-ios" aria-label="Open Learning SQL on Apple Store"
+             href="https://apps.apple.com/us/app/aprendendo-sql/id6744893043" target="_blank" rel="noopener">Apple Store</a>
+        </div>
+      </article>
+
+      <!-- Flutter -->
+      <article class="app-card" aria-labelledby="title-flutter">
+        <img class="app-icon" src="https://airtonfreitas.github.io/devlearningapps.github.io/flutter.png" alt="Learning Flutter app for creating mobile apps" loading="lazy">
+        <h3 id="title-flutter">Learning Flutter</h3>
+        <p class="app-desc">
+          Learn Flutter with practical examples, navigation, layout and <strong>integrated IDE</strong>. Program in Flutter to create mobile apps with expanding content.
+        </p>
+        <div class="badges" aria-label="Learning Flutter app metrics">
+          <span class="badge warn">new app</span>
+          <span class="badge ok">+500 downloads</span>
+          <span class="badge ok">rating 4.8</span>
+          <span class="badge ok">+70 evaluations</span>
+        </div>
+        <div class="buttons">
+          <a class="btn btn-gp" aria-label="Open Learning Flutter on Google Play"
+             href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendoflutter" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn btn-ios" aria-label="Open Learning Flutter on Apple Store"
+             href="https://apps.apple.com/us/app/aprendendo-flutter/id6746683178" target="_blank" rel="noopener">Apple Store</a>
+        </div>
+      </article>
+
+      <!-- Python -->
+      <article class="app-card" aria-labelledby="title-python">
+        <img class="app-icon" src="https://airtonfreitas.github.io/devlearningapps.github.io/python.png" alt="Learning Python app with practical lessons" loading="lazy">
+        <h3 id="title-python">Learning Python</h3>
+        <p class="app-desc">
+          Learn logic and programming with Python from scratch to advanced features. Practical course with lessons, exercises and <strong>integrated IDE</strong> for beginners.
+        </p>
+        <div class="badges" aria-label="Learning Python app metrics">
+          <span class="badge warn">new app</span>
+          <span class="badge ok">+1,500 downloads</span>
+          <span class="badge ok">rating 5.0</span>
+          <span class="badge ok">+10 evaluations</span>
+        </div>
+        <div class="buttons">
+          <a class="btn btn-gp" aria-label="Open Learning Python on Google Play"
+             href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendopyhton" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn btn-ios" aria-label="Open Learning Python on Apple Store"
+             href="https://apps.apple.com/us/app/aprendendo-python/id6747948627" target="_blank" rel="noopener">Apple Store</a>
+        </div>
+      </article>
+
+      <!-- HTML -->
+      <article class="app-card" aria-labelledby="title-html">
+        <img class="app-icon" src="../assets/images/html-logo.png" alt="Learning HTML app with practical lessons" loading="lazy">
+        <h3 id="title-html">Learning HTML</h3>
+        <p class="app-desc">
+          Learn HTML5 from scratch with practical lessons and <strong>integrated HTML Editor</strong>. Master tags, structure, semantics and forms for web development.
+        </p>
+        <div class="badges" aria-label="Learning HTML app metrics">
+          <span class="badge warn">new app</span>
+          <span class="badge ok">HTML Editor</span>
+          <span class="badge ok">Practical lessons</span>
+        </div>
+        <div class="buttons">
+          <a class="btn btn-gp" aria-label="Open Learning HTML on Google Play"
+             href="https://play.google.com/store/apps/details?id=com.airtonsiq.aprendendohtml" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn btn-ios" aria-label="Open Learning HTML on Apple Store"
+             href="https://apps.apple.com/us/app/aprendendo-html/id6751805906" target="_blank" rel="noopener">Apple Store</a>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; flex-direction:column; gap:10px; align-items:center;">
+      <p>&copy; 2025 DevLearning. All rights reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+  <!-- JavaScript para o carrossel das seções -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Função para inicializar um carrossel específico
+      function initCarousel(carouselSection) {
+        const slides = carouselSection.querySelectorAll('.carousel-slide');
+        const dots = carouselSection.querySelectorAll('.carousel-dot');
+        const prevBtn = carouselSection.querySelector('.carousel-nav.prev');
+        const nextBtn = carouselSection.querySelector('.carousel-nav.next');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+        // Remove active de todos os slides e dots
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // Adiciona active ao slide e dot atual
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      // Event listeners para os botões
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      // Event listeners para os dots
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentSlide = index;
+          showSlide(currentSlide);
+        });
+      });
+
+      // Garante que o primeiro slide apareça imediatamente
+      showSlide(0);
+
+      // Auto-play com transição mais suave
+      let autoPlayInterval = setInterval(nextSlide, 5000);
+      
+      // Pausa auto-play quando usuário interage
+      const carouselContainer = carouselSection.querySelector('.carousel-container');
+      carouselContainer.addEventListener('mouseenter', () => {
+        clearInterval(autoPlayInterval);
+      });
+      
+      carouselContainer.addEventListener('mouseleave', () => {
+        autoPlayInterval = setInterval(nextSlide, 5000);
+      });
+      }
+
+      // Inicializa todos os carrosséis
+      const carousels = document.querySelectorAll('.python-section');
+      carousels.forEach(carousel => {
+        initCarousel(carousel);
+      });
+    });
+  </script>
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+</body>
+</html>

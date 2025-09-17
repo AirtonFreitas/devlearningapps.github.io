@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "Dev Learning Apps – Aprenda Programação do Zero | Python, SQL, Flutter, HTML",
+    "description": "Estude SQL, Python, HTML e Flutter com apps interativos, IDE integrada e trilhas de aprendizado passo a passo. Mais de 1.500 downloads e 4.8 de avaliação!",
+    "keywords": "aprender programação, curso Python, curso SQL, curso Flutter, curso HTML, programação para iniciantes, apps educativos, DevLearning, programação mobile, IDE integrada, certificação programação, aulas práticas programação"
+  },
+  "navigation": {
+    "home": "Home",
+    "apps": "Nossos Apps",
+    "help": "Ajuda"
+  },
+  "home": {
+    "banner_title": "Dev Learning Apps – Aprenda programação do zero",
+    "section_path_title": "Seu caminho, módulo a módulo",
+    "section_editor_title": "Estude e codifique no mesmo lugar",
+    "section_mobile_title": "Estude pelo celular, em qualquer lugar",
+    "section_future_title": "O Futuro do Trabalho é Agora",
+    "section_news_title": "Novidades",
+    "section_creator_title": "Sobre o Criador",
+    "work_reality": {
+      "title": "O Futuro do Trabalho é Agora",
+      "subtitle": "Home office, trabalho remoto e flexibilidade não são mais tendências - são a realidade atual. Profissionais de tecnologia precisam se adaptar constantemente e aprender novas habilidades.",
+      "home_office": {
+        "title": "Home Office",
+        "description": "Mais de 40% dos profissionais trabalham remotamente"
+      },
+      "digital_skills": {
+        "title": "Habilidades Digitais",
+        "description": "Programação e tecnologia são essenciais para o futuro"
+      },
+      "learn_anywhere": {
+        "title": "Aprenda em Qualquer Lugar",
+        "description": "Estude no seu tempo, no seu ritmo, onde estiver"
+      },
+      "cta": "Não fique para trás. Aprenda as linguagens mais demandadas do mercado com nossos apps práticos e acessíveis. Comece hoje mesmo sua jornada na programação."
+    },
+    "apps": {
+      "python": {
+        "title": "Aprendendo Python",
+        "subtitle": "Aprenda lógica e programação com Python do zero a recursos avançados. Curso prático com aulas passo a passo, IDE integrada e exercícios para iniciantes.",
+        "downloads": "downloads",
+        "rating": "nota",
+        "users": "usuários"
+      },
+      "sql": {
+        "title": "Aprendendo SQL",
+        "subtitle": "Curso completo de SQL com aulas guiadas, desafios, IDE integrada e certificado de conclusão. Aprenda banco de dados e queries para concursos, TI e carreira dev.",
+        "downloads": "downloads",
+        "rating": "nota",
+        "users": "usuários"
+      },
+      "flutter": {
+        "title": "Aprendendo Flutter",
+        "subtitle": "Aprenda Flutter com exemplos práticos, navegação, layout e IDE integrada. Programe em Flutter para criar apps móveis com conteúdo em expansão.",
+        "downloads": "downloads",
+        "rating": "nota",
+        "users": "usuários"
+      },
+      "html": {
+        "title": "Aprendendo HTML",
+        "subtitle": "Aprenda HTML5 do zero com aulas práticas e Editor HTML integrado. Domine tags, estrutura, semântica e formulários para desenvolvimento web.",
+        "highlights": ["Tags HTML", "Estrutura", "Semântica", "Formulários", "HTML5", "Responsivo"],
+        "metrics": ["App novo", "Editor HTML", "Aulas práticas"]
+      }
+    },
+    "about": {
+      "title": "Sobre o Criador",
+      "description": "Olá! Eu sou Airton Freitas, desenvolvedor único por trás dos apps Aprendendo SQL, Aprendendo Python e Aprendendo Flutter. Construo tudo do zero: conteúdo, código, design, publicação e manutenção contínua nas lojas.",
+      "contact": "Quer falar comigo, ter novidades ou oportunidades? Me adicione no LinkedIn.",
+      "last_update": "Última atualização: 03/08/2025"
+    }
+  },
+  "apps_page": {
+    "title": "Apps de Programação - Aprendendo Python, SQL, Flutter e HTML",
+    "description": "Conheça todos os nossos apps de programação: Aprendendo Python, SQL, Flutter e HTML. Mais de 1.500 downloads, 4.8 de avaliação. Aulas práticas, IDE integrada e certificação.",
+    "section_title": "Apps de Programação",
+    "app_descriptions": {
+      "sql": "Curso completo de SQL com aulas guiadas, desafios, IDE integrada e certificado de conclusão. Aprenda banco de dados e queries para concursos, TI e carreira dev.",
+      "flutter": "Aprenda Flutter com exemplos práticos, navegação, layout e IDE integrada. Programe em Flutter para criar apps móveis com conteúdo em expansão.",
+      "python": "Aprenda lógica e programação com Python do zero a recursos avançados. Curso prático com aulas, exercícios e IDE integrada para iniciantes.",
+      "html": "Aprenda HTML5 do zero com aulas práticas e Editor HTML integrado. Domine tags, estrutura, semântica e formulários para desenvolvimento web."
+    },
+    "badges": {
+      "downloads": "downloads",
+      "rating": "nota",
+      "evaluations": "avaliações",
+      "new_app": "app novo",
+      "editor_html": "Editor HTML",
+      "practical_lessons": "Aulas práticas"
+    },
+    "buttons": {
+      "google_play": "Google Play",
+      "apple_store": "Apple Store"
+    }
+  },
+  "help_page": {
+    "title": "Central de Ajuda e Suporte | Dev Learning Apps - FAQ e Contato",
+    "description": "Central de ajuda completa dos apps DevLearning. FAQ detalhado, recuperação de senha, problemas de premium, contato por e-mail e formulário. Suporte 24/7.",
+    "page_title": "Central de Ajuda",
+    "subtitle": "Encontre respostas rápidas para suas dúvidas sobre nossos apps",
+    "faq": {
+      "forgot_password": {
+        "question": "Esqueci minha senha. Como recuperar?",
+        "answer": "Toque em \"Esqueci minha senha\" e siga o e-mail de recuperação. Verifique Spam/Lixeira e confirme o e-mail digitado."
+      },
+      "multiple_devices": {
+        "question": "Posso usar a mesma conta em mais de um dispositivo?",
+        "answer": "Sim. Faça login com o mesmo e-mail. Progresso e premium sincronizam ao abrir conectado."
+      },
+      "new_phone": {
+        "question": "Troquei de celular. Vou perder meu acesso?",
+        "answer": "Não. Instale o app e entre com o mesmo e-mail. Se não liberar, use \"Restaurar acesso\"."
+      },
+      "premium_not_working": {
+        "question": "Paguei e o premium não liberou. O que faço?",
+        "answer": "Reabra o app online, confira a conta da compra e toque em \"Restaurar acesso\". Se persistir, envie comprovante."
+      },
+      "complete_pass": {
+        "question": "Comprei no site o Passe Completo. Como uso nos apps?",
+        "answer": "Entre com o mesmo e-mail usado no site e acesse Perfil → Restaurar acesso."
+      },
+      "separate_purchase": {
+        "question": "Posso comprar o premium de cada app separadamente?",
+        "answer": "Sim. Cada app tem preço próprio. O Passe Completo libera todos."
+      },
+      "duplicate_charge": {
+        "question": "Recebi cobrança duplicada. Como proceder?",
+        "answer": "Confira o histórico de pedidos da loja/site e envie o comprovante pelo formulário."
+      },
+      "report_bug": {
+        "question": "Como reportar um bug?",
+        "answer": "Envie descrição, passos, prints/vídeo, modelo do aparelho, versão do SO e do app pelo formulário."
+      },
+      "wrong_account": {
+        "question": "Comprei com outra conta da loja.",
+        "answer": "O acesso fica na conta da compra. Envie o pedido e a conta correta para avaliarmos opções."
+      }
+    },
+    "contact": {
+      "title": "Não encontrou sua resposta?",
+      "subtitle": "Entre em contato conosco e responderemos o mais rápido possível",
+      "email": "contact@devlearningapps.com",
+      "form_subtitle": "Ou use o formulário abaixo:"
+    }
+  },
+  "privacy_page": {
+    "title": "Política de Privacidade — DevLearning Apps",
+    "description": "Política de privacidade dos apps DevLearning: Aprendendo SQL, Python e Flutter. Saiba como seus dados são coletados e utilizados.",
+    "page_title": "Política de Privacidade",
+    "subtitle": "DevLearning Apps — Aprendendo SQL, Python e Flutter",
+    "back_link": "← Voltar ao site principal"
+  },
+  "footer": {
+    "copyright": "© 2025 DevLearning. Todos os direitos reservados.",
+    "privacy_policy": "Política de Privacidade"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro ao carregar conteúdo",
+    "retry": "Tentar novamente"
+  }
+}

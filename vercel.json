@@ -25,6 +25,19 @@
           "value": "public, max-age=86400"
         }
       ]
+    },
+    {
+      "source": "/assets/i18n/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -32,6 +45,21 @@
       "source": "/sitemap.xml",
       "destination": "/public/sitemap.xml",
       "permanent": false
+    },
+    {
+      "source": "/pt/(.*)",
+      "destination": "/$1",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/en/(.*)",
+      "destination": "/en/$1"
+    },
+    {
+      "source": "/es/(.*)",
+      "destination": "/es/$1"
     }
   ]
 }

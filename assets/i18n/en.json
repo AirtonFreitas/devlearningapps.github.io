@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "Dev Learning Apps – Learn Programming from Scratch | Python, SQL, Flutter, HTML",
+    "description": "Learn SQL, Python, HTML and Flutter with interactive apps, integrated IDE and guided learning paths. Over 1,500 downloads and 4.8 rating!",
+    "keywords": "learn programming, python course, sql course, flutter course, html course, programming for beginners, educational apps, DevLearning, mobile programming, integrated IDE, programming certification, practical programming lessons"
+  },
+  "navigation": {
+    "home": "Home",
+    "apps": "Our Apps",
+    "help": "Help"
+  },
+  "home": {
+    "banner_title": "Dev Learning Apps – Learn programming from scratch",
+    "section_path_title": "Your path, module by module",
+    "section_editor_title": "Study and code in the same place",
+    "section_mobile_title": "Study on your phone, anywhere",
+    "section_future_title": "The Future of Work is Now",
+    "section_news_title": "What's New",
+    "section_creator_title": "About the Creator",
+    "work_reality": {
+      "title": "The Future of Work is Now",
+      "subtitle": "Remote work, home office and flexibility are no longer trends - they are the current reality. Technology professionals need to constantly adapt and learn new skills.",
+      "home_office": {
+        "title": "Home Office",
+        "description": "Over 40% of professionals work remotely"
+      },
+      "digital_skills": {
+        "title": "Digital Skills",
+        "description": "Programming and technology are essential for the future"
+      },
+      "learn_anywhere": {
+        "title": "Learn Anywhere",
+        "description": "Study at your own time, at your own pace, wherever you are"
+      },
+      "cta": "Don't get left behind. Learn the most in-demand programming languages in the market with our practical and accessible apps. Start your programming journey today."
+    },
+    "apps": {
+      "python": {
+        "title": "Learning Python",
+        "subtitle": "Learn logic and programming with Python from scratch to advanced features. Practical course with step-by-step lessons, integrated IDE and exercises for beginners.",
+        "downloads": "downloads",
+        "rating": "rating",
+        "users": "users"
+      },
+      "sql": {
+        "title": "Learning SQL",
+        "subtitle": "Complete SQL course with guided lessons, challenges, integrated IDE and completion certificate. Learn databases and queries for exams, IT and dev career.",
+        "downloads": "downloads",
+        "rating": "rating",
+        "users": "users"
+      },
+      "flutter": {
+        "title": "Learning Flutter",
+        "subtitle": "Learn Flutter with practical examples, navigation, layout and integrated IDE. Program in Flutter to create mobile apps with expanding content.",
+        "downloads": "downloads",
+        "rating": "rating",
+        "users": "users"
+      },
+      "html": {
+        "title": "Learning HTML",
+        "subtitle": "Learn HTML5 from scratch with practical lessons and integrated HTML Editor. Master tags, structure, semantics and forms for web development.",
+        "highlights": ["HTML Tags", "Structure", "Semantics", "Forms", "HTML5", "Responsive"],
+        "metrics": ["New app", "HTML Editor", "Practical lessons"]
+      }
+    },
+    "about": {
+      "title": "About the Creator",
+      "description": "Hello! I'm Airton Freitas, the sole developer behind the Learning SQL, Learning Python and Learning Flutter apps. I build everything from scratch: content, code, design, publishing and continuous maintenance in stores.",
+      "contact": "Want to talk to me, get news or opportunities? Add me on LinkedIn.",
+      "last_update": "Last update: 03/08/2025"
+    }
+  },
+  "apps_page": {
+    "title": "Programming Apps - Learning Python, SQL, Flutter and HTML",
+    "description": "Discover all our programming apps: Learning Python, SQL, Flutter and HTML. Over 1,500 downloads, 4.8 rating. Practical lessons, integrated IDE and certification.",
+    "section_title": "Programming Apps",
+    "app_descriptions": {
+      "sql": "Complete SQL course with guided lessons, challenges, integrated IDE and completion certificate. Learn databases and queries for exams, IT and dev career.",
+      "flutter": "Learn Flutter with practical examples, navigation, layout and integrated IDE. Program in Flutter to create mobile apps with expanding content.",
+      "python": "Learn logic and programming with Python from scratch to advanced features. Practical course with lessons, exercises and integrated IDE for beginners.",
+      "html": "Learn HTML5 from scratch with practical lessons and integrated HTML Editor. Master tags, structure, semantics and forms for web development."
+    },
+    "badges": {
+      "downloads": "downloads",
+      "rating": "rating",
+      "evaluations": "evaluations",
+      "new_app": "new app",
+      "editor_html": "HTML Editor",
+      "practical_lessons": "Practical lessons"
+    },
+    "buttons": {
+      "google_play": "Google Play",
+      "apple_store": "Apple Store"
+    }
+  },
+  "help_page": {
+    "title": "Help and Support Center | Dev Learning Apps - FAQ and Contact",
+    "description": "Complete help center for DevLearning apps. Detailed FAQ, password recovery, premium issues, email contact and form. 24/7 support.",
+    "page_title": "Help Center",
+    "subtitle": "Find quick answers to your questions about our apps",
+    "faq": {
+      "forgot_password": {
+        "question": "I forgot my password. How to recover?",
+        "answer": "Tap \"Forgot my password\" and follow the recovery email. Check Spam/Trash and confirm the email entered."
+      },
+      "multiple_devices": {
+        "question": "Can I use the same account on more than one device?",
+        "answer": "Yes. Log in with the same email. Progress and premium sync when opening connected."
+      },
+      "new_phone": {
+        "question": "I changed phones. Will I lose my access?",
+        "answer": "No. Install the app and enter with the same email. If it doesn't unlock, use \"Restore access\"."
+      },
+      "premium_not_working": {
+        "question": "I paid and premium didn't unlock. What do I do?",
+        "answer": "Reopen the app online, check the purchase account and tap \"Restore access\". If it persists, send proof."
+      },
+      "complete_pass": {
+        "question": "I bought the Complete Pass on the website. How do I use it in the apps?",
+        "answer": "Enter with the same email used on the website and go to Profile → Restore access."
+      },
+      "separate_purchase": {
+        "question": "Can I buy premium for each app separately?",
+        "answer": "Yes. Each app has its own price. The Complete Pass unlocks all."
+      },
+      "duplicate_charge": {
+        "question": "I received a duplicate charge. How to proceed?",
+        "answer": "Check the store/website order history and send the proof through the form."
+      },
+      "report_bug": {
+        "question": "How to report a bug?",
+        "answer": "Send description, steps, screenshots/video, device model, OS version and app version through the form."
+      },
+      "wrong_account": {
+        "question": "I bought with another store account.",
+        "answer": "Access stays in the purchase account. Send the order and correct account for us to evaluate options."
+      }
+    },
+    "contact": {
+      "title": "Didn't find your answer?",
+      "subtitle": "Contact us and we'll respond as quickly as possible",
+      "email": "contact@devlearningapps.com",
+      "form_subtitle": "Or use the form below:"
+    }
+  },
+  "privacy_page": {
+    "title": "Privacy Policy — DevLearning Apps",
+    "description": "Privacy policy for DevLearning apps: Learning SQL, Python and Flutter. Learn how your data is collected and used.",
+    "page_title": "Privacy Policy",
+    "subtitle": "DevLearning Apps — Learning SQL, Python and Flutter",
+    "back_link": "← Back to main site"
+  },
+  "footer": {
+    "copyright": "© 2025 DevLearning. All rights reserved.",
+    "privacy_policy": "Privacy Policy"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error loading content",
+    "retry": "Try again"
+  }
+}

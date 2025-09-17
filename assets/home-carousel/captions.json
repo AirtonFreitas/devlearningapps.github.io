@@ -3,22 +3,22 @@
     "pt": {
       "title": "Seu caminho, módulo a módulo.",
       "subtitle": "Trilhas guiadas em SQL, Python, Flutter e HTML — do zero ao avançado.",
-      "ctaText": "Ver trilhas",
-      "ctaHref": "/trilhas",
+      "ctaText": "Ver Apps",
+      "ctaHref": "/apps.html",
       "alt": "Roadmap de estudo com ícones dos apps Dev Learning"
     },
     "en": {
       "title": "Your path, module by module.",
       "subtitle": "Guided tracks in SQL, Python, Flutter and HTML — from beginner to advanced.",
-      "ctaText": "Browse tracks",
-      "ctaHref": "/en/tracks",
+      "ctaText": "View Apps",
+      "ctaHref": "/en/apps.html",
       "alt": "Study roadmap with Dev Learning app icons"
     },
     "es": {
       "title": "Tu camino, módulo a módulo.",
       "subtitle": "Rutas guiadas en SQL, Python, Flutter y HTML — de principiante a avanzado.",
-      "ctaText": "Ver rutas",
-      "ctaHref": "/es/rutas",
+      "ctaText": "Ver Apps",
+      "ctaHref": "/es/apps.html",
       "alt": "Hoja de ruta de estudio con íconos de las apps de Dev Learning"
     }
   },
@@ -27,22 +27,22 @@
     "pt": {
       "title": "Estude e codifique no mesmo lugar.",
       "subtitle": "IDE integrada: execute exemplos, teste códigos e aprenda mais rápido.",
-      "ctaText": "Testar agora",
-      "ctaHref": "/ide",
+      "ctaText": "Ver Apps",
+      "ctaHref": "/apps.html",
       "alt": "Editor de código com saída dentro do app Dev Learning"
     },
     "en": {
       "title": "Study and code in one place.",
       "subtitle": "Integrated IDE: run examples, try code, learn faster.",
-      "ctaText": "Try it now",
-      "ctaHref": "/en/ide",
+      "ctaText": "View Apps",
+      "ctaHref": "/en/apps.html",
       "alt": "Code editor with output inside the Dev Learning app"
     },
     "es": {
       "title": "Estudia y programa en un solo lugar.",
       "subtitle": "IDE integrada: ejecuta ejemplos, prueba código y aprende más rápido.",
-      "ctaText": "Probar ahora",
-      "ctaHref": "/es/ide",
+      "ctaText": "Ver Apps",
+      "ctaHref": "/es/apps.html",
       "alt": "Editor de código con salida dentro de la app Dev Learning"
     }
   },
@@ -52,21 +52,21 @@
       "title": "Estude pelo celular, em qualquer lugar.",
       "subtitle": "Aulas curtas, áudio e progresso sincronizado entre dispositivos.",
       "ctaText": "Explorar apps",
-      "ctaHref": "/apps",
+      "ctaHref": "/apps.html",
       "alt": "Pessoa estudando pelos apps Dev Learning no celular"
     },
     "en": {
       "title": "Learn on your phone, anywhere.",
       "subtitle": "Short lessons, audio, and synced progress across devices.",
       "ctaText": "Explore apps",
-      "ctaHref": "/en/apps",
+      "ctaHref": "/en/apps.html",
       "alt": "Person learning with Dev Learning apps on a phone"
     },
     "es": {
       "title": "Estudia en tu celular, en cualquier lugar.",
       "subtitle": "Lecciones cortas, audio y progreso sincronizado entre dispositivos.",
       "ctaText": "Explorar apps",
-      "ctaHref": "/es/apps",
+      "ctaHref": "/es/apps.html",
       "alt": "Persona estudiando con las apps de Dev Learning en el móvil"
     }
   }
